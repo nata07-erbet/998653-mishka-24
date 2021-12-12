@@ -14,16 +14,18 @@
         <span class="visually-hidden">Открыть меню</span>
        </button>
        <div class="main-nav__wrapper">
-         <ul class="main-nav__list user__list">
+         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__item-link" href="#"> <span class="visually-hidden">Поиск</span>
-              <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
-                <label class="search-form__label" for="search">
+              <!--
+                <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
+                <label class="search-form__label" for="search"> </label>
                 <input class="search-form__label visually-hidden"  type ="search" id="search">
                 <svg  class="search-form__label-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.2" d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" fill="black"/>
                 </svg>
               </form>
+              -->
             </a>
           </li>
           <li class="user-list__item">
@@ -39,17 +41,19 @@
           </li>
         </ul>
          <!--ФОРМА ДЛЯ КОРЗИНЫ-->
-        <form class="baskets_form" action="https://echo.htmlacademy.ru" method="GET">
-          <h2 class="baskets_form__title">Добавить в корзину</h2>
-          <p class="baskets_form__size-text">Выберите размер:</p>
-          <div class="button__wrapper">
-            <button class="button  baskets_form__button-size" type="button">S</button>
-            <button class="button  baskets_form__button-size" type="button">M</button>
-            <button class="button  baskets_form__button-size" type="button">L</button>
-          </div>
-          <button class="button  baskets_form__button-send" type="button">Добавить</button>
-        </form>
-         <ul class="main-nav__list  site__list">
+         <section class="baskets-modal">
+          <form class="baskets-form" action="https://echo.htmlacademy.ru" method="GET">
+            <h2 class="baskets-form__title">Добавить в корзину</h2>
+            <p class="baskets-form__size-text">Выберите размер:</p>
+            <div class="button__wrapper">
+              <button class="button  baskets_form__button-size" type="button">S</button>
+              <button class="button  baskets_form__button-size" type="button">M</button>
+              <button class="button  baskets_form__button-size" type="button">L</button>
+            </div>
+            <button class="button  baskets_form__button-send" type="button">Добавить</button>
+          </form>
+         </section>
+         <ul class="main-nav__list  site-list">
           <li class="site-list__item">
             <a class="site-list__item-link" href="catalog.html">
               Каталог товаров
@@ -72,7 +76,7 @@
         </div>
         <nav class="toys-navigation">
           <div class="toys-navigation__wrapper">
-            <ul class="toys-navigation__list">
+            <ul class="toys-navigation-list">
               <li class="toys-navigation__item toys-navigation__item--interios">Предметы Интерьера</li>
               <li class="toys-navigation__item-toy toys-navigation__item-toy--interior">Детские  игрушки</li>
             </ul>
@@ -90,7 +94,7 @@
               Доступны в шести расцветках и трёх размерах.
             </p>
             <div class="baskets__properties">
-               <table class="baskets_table"> <!--это будет блок или элемент-->
+               <table class="baskets-table">
                 <tr>
                   <td class="baskets__properties-characteristic">Цвет:</td>
                   <td class="baskets__properties-description">тиффани/серый</td>
@@ -115,7 +119,7 @@
       <section class="about">
         <div class="container">
           <h2 class="about__title">Коротко о нас:</h2>
-          <ul class="about__list">
+          <ul class="about-list">
             <li class="about__item about__item--material">Экологически чистые материалы</li>
             <li class="about__item about__item--slyle">Скандинавский стиль по российской цене</li>
             <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
@@ -128,10 +132,10 @@
 
       <section class="reviews">
         <div class="container">
-          <div class=" reviews_wrapper slider">
+          <div class=" reviews__wrapper slider">
             <h2 class="reviews__title">Отзывы</h2>
-              <div class="reviews__list slider__list">
-                <blockquote class="reviews__item slider__item" >
+              <div class="reviews-list slider-list">
+                <blockquote class="reviews__item slider__item">
                   <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков</p>
                   <cite class="reviews__author-name">Анастасия Красильникова</cite>
                   <address class="reviews__author-email">
@@ -153,10 +157,10 @@
         <div class="container">
           <h2 class="contacts__title">Контакты</h2>
           <address class="contacts__data">
-            <p class="contacts_email">e-mail:</p>
-            <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            <p class="contacts__email">адрес:</p>
-            <p class="contacts__email">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+            <p class="contacts__caption">e-mail:</p>
+            <a class="contacts__caption-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            <p class="contacts__caption">адрес:</p>
+            <p class="contacts__caption">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
           </address>
         </div>
       </section>
@@ -179,7 +183,7 @@
       <section class="social">
         <h2 class="social__title visually-hidden">Иконки соц сетей</h2>
         <div class="social__wrapper">
-          <ul class="social__list">
+          <ul class="social-list">
             <li class="social__item">
               <a class="social__item" href="#">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +213,7 @@
         <a class="copyright__link" href="#">
           <svg width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.9687 0.0444336H13.8687L0.368652 1.44443V26.1444L13.8687 34.1444L27.2687 26.1444V1.44443L13.9687 0.0444336ZM25.3687 12.1444L13.8687 5.34443V5.24443H13.7687L13.6687 5.14443V5.24443L2.26865 12.1444V3.14443L13.7687 1.94443L25.3687 3.14443V12.1444ZM13.7687 6.84443L25.2687 13.5444L20.7687 16.1444L13.6687 11.9444V13.3444L19.5687 16.8444L18.6687 17.3444L13.6687 14.3444V15.7444L17.4687 18.0444L16.6687 18.5444L13.6687 16.7444V18.1444L15.5687 19.2444L13.7687 20.3444L2.36865 13.6444L13.7687 6.84443ZM2.26865 15.1444L13.6687 21.9444V22.9444L5.76865 18.2444V19.6444L13.7687 24.4444V25.5444L5.76865 20.8444V22.2444L13.7687 27.0444L21.8687 22.1444V16.9444L25.2687 14.9444V24.9444L13.7687 31.8444L2.26865 25.0444V15.1444Z" fill="#63D1BB"/>
-            </svg>
+          </svg>
         </a>
       </section>
     </footer>
