@@ -45,12 +45,17 @@
           <form class="baskets-form" action="https://echo.htmlacademy.ru" method="GET">
             <h2 class="baskets-form__title">Добавить в корзину</h2>
             <p class="baskets-form__size-text">Выберите размер:</p>
-            <div class="button__wrapper">
-              <button class="button  baskets_form__button-size" type="button">S</button>
-              <button class="button  baskets_form__button-size" type="button">M</button>
-              <button class="button  baskets_form__button-size" type="button">L</button>
-            </div>
-            <button class="button  baskets_form__button-send" type="button">Добавить</button>
+            <div class="baskets-form__inner">
+              <label class="baskets-form__label">S
+                <input class="baskets-form__input" type="radio" name="size" id="S"checked>
+              </label>
+              <label class="baskets-form__label">M
+                <input class="baskets-form__input" type="radio" name="size" id="M">
+              </label>
+              <label class="baskets-form__label">L
+                <input class="baskets-form__input" type="radio" name="size" id="L">
+              </label>
+            <button class="button  baskets-form__button" type="submit">Добавить</button>
           </form>
          </section>
          <ul class="main-nav__list  site-list">
