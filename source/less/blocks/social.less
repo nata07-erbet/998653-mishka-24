@@ -1,0 +1,26 @@
+.social__wrapper {
+  padding: auto;
+  padding-top: 25px;
+  padding-bottom: 27px;
+
+  &::after {        /*нет черты*/
+    position: relative;
+    width: 260px;
+    height: 1px;
+    display: inline-block;
+    background-color: red;
+    margin-bottom: 29px;
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 41px;
+  }
+}
+

@@ -1,19 +1,36 @@
+.baskets-modal__wrapper {
+  width: 320px;
+  height: 336px;
+  padding-top: 29px;
+}
+
 .baskets-form__title {
   font-weight: bold;
   font-size: @subtitle-size;
   line-height: @subtitle-line;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
   margin-bottom: 14px;
 }
 
 .baskets-form__size-text {
   font-size: @txt-size;
   line-height: @txt-line;
+  text-align: center;
+  margin: 0;
   margin-bottom: 22px;
 }
 
-.baskets-form__label {
-  border: 2px solid @btn-left-color;
-  padding: 18px 22px;
+.baskets-form__inner {
+  display: flex;
+}
+
+.baskets-form__label { /*буквы размеров встали криво*/
+  display: block;
+  padding: 18px 37px;
+  width: 82px;
+  border: 2px solid @txt-color; /*как добавить прозрачность через миксины?*/
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -21,7 +38,7 @@
   text-transform: uppercase;
 
   &:not(:last-child) {
-    margin-left: 7px;
+    margin-right: 7px;
   }
 }
 
@@ -29,4 +46,5 @@
   margin-top: 31px;
   margin-bottom: 46px;
   width: 100%;
+  background-color: @btn-left-color; /*стоит раньше button - цвет не поменялся*/
 }

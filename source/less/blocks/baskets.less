@@ -2,23 +2,35 @@
   font-weight: bold;
   font-size: @subtitle-size;
   line-height: @subtitle-line;
+  margin: 0;
+  margin-bottom: 4px;
+}
 
-  margin-bottom: 41px;
+.baskets__stock {
+  font-size: @offer-size;
+  line-height: @offer-line;
+  font-weight: bold;
+  color: @btn-left-color;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 .baskets__description,
 .baskets-table {
   font-weight: normal;
   font-size: @txt-size;
-  line-height: @txt-line;
+  line-height: 1.6;
   margin-bottom: 28px;
 }
 
 .baskets__image {
-  margin-bottom: 26px;
+  display: block;
+  margin-bottom: 26px; /*не сработало*/
 }
 
 .baskets__price {
+  /*не отобразился в style.css*/
+  margin: 0;
   font-weight: bold;
   font-size: @offer-size;
   line-height: @offer-line;
