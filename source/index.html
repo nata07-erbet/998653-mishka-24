@@ -11,13 +11,13 @@
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo-wrapper">
+        <a class="page-header__logo">
           <!--обертка для позиционирования лого-->
           <img src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип кампании">
         </a>
       </div>
 
-      <nav class="main-nav  main-nav-wrapper">
+      <nav class="main-nav main-nav__wrapper">
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -65,11 +65,8 @@
             </li>
           </ul>
         </div>
-
+      </nav>
     </div>
-
-    </nav>
-
   </header>
 
   <main class="page-main">
@@ -78,11 +75,11 @@
     <section class="toys">
       <div class="toys__image-wrapper">
         <h2 class="page-main__header">Милые штуки ручной работы для дома</h2>
-        <img class="toys__image" src="./img/hero-mobile.jpg" width="567" height="373" alt="вязаные игрушки">
-
+        <div class="toys__image">
+        </div>
         <nav class="toys-navigation">
           <div class="toys-navigation__wrapper">
-            <ul class="toys-navigation-list list-reset">
+            <ul class="toys-navigation__list list-reset">
               <li class="toys-navigation__item">
                 <button class="toys-navigation__button toys-navigation__button--interios" type="button">
                   <span class="toys-navigation-caption">Предметы интерьера</span>
@@ -187,14 +184,14 @@
           <p class="contacts__caption">e-mail:</p>
           <a class="contacts__caption-link link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           <p class="contacts__caption">адрес:</p>
-          <p class="contacts__caption">г. Санкт-Петербургул. Большая Конюшенная д. 19/8, офис 101</p>
+          <p class="contacts__caption">г. Санкт-Петербург ул.Большая Конюшенная д. 19/8, офис 101</p>
         </address>
       </div>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <div class="map_image">
+      <div class="map__image">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.207574506643!2d30.318670033714515!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1638981895241!5m2!1sru!2sru"
           width="323" height="455" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -205,11 +202,12 @@
 
   <footer class="page-footer">
     <div class="container">
-      <a class="page-footer__logo visually-hidden link">
-        <img class="page-footer__logo-image" src="./img/logo-footer.svg" width="27" height="34"
-          alt="логотип html-academy">
-      </a>
+
       <section class="social">
+        <a class="page-footer__logo visually-hidden link">
+          <img class="page-footer__logo-image" src="./img/logo-footer.svg" width="27" height="34"
+            alt="логотип html-academy">
+        </a>
         <h2 class="social__title visually-hidden">Иконки соц сетей</h2>
         <div class="social__wrapper">
           <ul class="social-list list-reset">
@@ -244,6 +242,7 @@
         </div>
       </section>
       <section class="copyright copyright__wrapper">
+        <h2 class="copyright__title visually-hidden">Копирайт</h2>
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link link" href="#">
           <svg width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,6 +274,7 @@
             </label>
           </div>
           <button class="button  baskets-form__button" type="submit">Добавить</button>
+        </div>
       </form>
     </div>
   </section>

@@ -1,16 +1,17 @@
-.social__wrapper {
-  padding: auto;
-  padding-top: 25px;
-  padding-bottom: 27px;
+.social {
+  margin-bottom: 29px;
+}
 
-  &::after {        /*нет черты*/
-    position: relative;
-    width: 260px;
-    height: 1px;
-    display: inline-block;
-    background-color: red;
-    margin-bottom: 29px;
-  }
+.social__wrapper {
+  width: 260px;
+  padding: auto;
+  padding-top: 29px;
+  padding-bottom: 31px;
+  border-bottom: 2px solid @line-color;
+}
+
+.social__title {
+  margin: 0;
 }
 
 .social-list {
@@ -24,3 +25,6 @@
   }
 }
 
+.social__item link {
+  display: block;
+}

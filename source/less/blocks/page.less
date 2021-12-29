@@ -1,17 +1,10 @@
 .page {
-  width: 320px;
   box-sizing: border-box;
   outline: 2px solid red;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 .page__body {
-  width: 100%;
+  width: 320px;
   min-height: 100%;
   margin: 0 auto;
   background-color: @bg-color;
@@ -20,17 +13,6 @@
   font-weight: normal;
   font-size: @txt-size;
   line-height: @txt-line;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .container {
