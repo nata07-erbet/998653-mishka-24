@@ -79,37 +79,42 @@
       <div class="container">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <div class="catalog__wrapper">
-          <ul class="catalog-list list-reset">
+          <ul class="catalog__list list-reset">
             <li class="catalog__item">
               <article class="goods">
                 <div class="goods__wrapper">
-                  <h2 class="goods__title">Зайчик-попрыгайчик</h2>
                   <img class="goods__image" src="./img/photo-1.jpg" width="334" height="334" alt="вязаный заяц">
-                  <p class="goods__description">Рост 30 см, вес 200 г</p>
+                  <div class="goods__content">
+                    <h2 class="goods__title">Зайчик-попрыгайчик</h2>
+                    <p class="goods__description">Рост 30 см, вес 200 г</p>
                   <p class="goods__price">1 200 руб.</p>
+                  </div>
                 </div>
               </article>
             </li>
             <li class="catalog__item">
               <article class="goods">
                 <div class="goods__wrapper">
-                  <h2 class="goods__title">Корзинка для белья</h2>
                   <img class="goods__image" src="./img/photo-2.jpg" width="334" height="334"
                     alt="вязаная корзинка для белья">
-                  <p class="goods__description">Диаметр 15 см, высота 10 см</p>
-                  <p class="goods__price">690 руб.</p>
-                </div>
+                    <div class="goods__content">
+                      <h2 class="goods__title">Корзинка для белья</h2>
+                      <p class="goods__description">Диаметр 15 см, высота 10 см</p>
+                      <p class="goods__price">690 руб.</p></div>
+                    </div>
               </article>
             </li>
             <li class="catalog__item">
               <article class="goods">
                 <div class="goods__wrapper">
-                  <h2 class="goods__title">Большая корзинка для игрушек</h2>
                   <img class="goods__image" src="./img/photo-3.jpg" width="334" height="334"
                     alt="вязаная корзинка для игрушек">
-                  <p class="goods__description">Диаметр 30 см, высота 30 см</p>
-                  <p class="goods__price">1 500 руб.</p>
-                </div>
+                    <div class="goods__content">
+                      <h2 class="goods__title">Большая корзинка для игрушек</h2>
+                    <p class="goods__description">Диаметр 30 см, высота 30 см</p>
+                    <p class="goods__price">1 500 руб.</p>
+                    </div>
+                  </div>
               </article>
             </li>
           </ul>
@@ -124,9 +129,11 @@
         </div>
 
         <video class="production__video" poster="./img/video.jpg"></video>
-        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-          появляются наши товары.</p>
-        <button class="button production__button-order" type="button">Сделать заказ</button>
+        <div class="production__content">
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+            появляются наши товары.</p>
+          <button class="button production__button-order" type="button">Сделать заказ</button>
+        </div>
       </div>
     </section>
 

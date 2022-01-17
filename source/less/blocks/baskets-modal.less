@@ -26,14 +26,15 @@
   display: flex;
 }
 
-.baskets-form__label { /*буквы размеров встали криво*/
-  display: block;
-  padding: 18px 37px;
+.baskets-form__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 82px;
-  border: 2px solid @txt-color; /*как добавить прозрачность через миксины?*/
+  height: 52px;
+  border: 2px solid fade(@txt-color, 10%);
   font-weight: bold;
   font-size: 17px;
-  line-height: 16px;
   text-align: center;
   text-transform: uppercase;
 
@@ -42,9 +43,15 @@
   }
 }
 
+.baskets-form__label--current {
+  border: 2px solid @btn-left-color;
+}
+
 .baskets-form__button {
   margin-top: 31px;
   margin-bottom: 46px;
   width: 100%;
-  background-color: @btn-left-color; /*стоит раньше button - цвет не поменялся*/
+  background-color: @btn-left-color;
+  color: @bg-color;
+  border: none;
 }
