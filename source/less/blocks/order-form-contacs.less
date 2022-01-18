@@ -1,0 +1,88 @@
+.order-form-contacs {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.order-form-contacs:last-child {
+  margin-bottom: 0; /*не обнулился отступ*/
+}
+
+
+.order-form-contacs__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: @menu-size;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: @btn-left-color;
+  margin-bottom: 29px;
+}
+
+.order-form-type__title-mark::after { /*не вижу этого элемента*/
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 2px;
+  color: @btn-left-color;
+}
+
+.order-form-contacs__label-mark {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: @menu-size;
+  line-height: 1.06;
+}
+
+.order-form-contacs__input {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: @offer-size;
+  line-height: 1.06;
+  color: fade(@caption-color, 30%); /*как отрегулировать цвет  placeholder?*/
+  min-width: 260px;
+  min-height: 52px;
+  border: none;
+  border-bottom: 2px solid @caption-color;
+  padding: 17px 0;
+}
+
+.contacts-input {
+  margin-bottom: 22px;
+}
+
+.order-form-contacs__title--tel,
+.order-form-contacs__title--email {
+  margin-bottom: 5px;
+}
+
+.order-form-contacs__input-text {
+  border: none;
+  border: 2px solid @txt-color;
+  width: 260px;
+  min-height: 142px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: @offer-size;
+  line-height: 1.06;
+  color: fade(@caption-color, 30%);
+  padding: 17px;
+}
+
+.order-form-contacs__warning {
+  display: block;
+  font-size: @contact-size;
+  line-height: 1.14;
+  color: @caption-color;
+  margin-bottom: 30px;
+}
+
+.order-form__button-send {
+  padding: 18px 37px;
+  margin-bottom: 55px;
+}
