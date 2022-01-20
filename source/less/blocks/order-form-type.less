@@ -45,16 +45,17 @@
   margin-right: 19px;
 }
 
-.order-form-type__input:checked { /*какая ошибка в конструкции?*/
-  .order-form-type__label::after {
-    content: " ";
-    position: absolute;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    color: @form-color;
-  }
+
+.order-form-type__input:checked + .order-form-type__label::after {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: @form-color;
 }
+
 
 .order-form-type__mark {
   width: 200px;
