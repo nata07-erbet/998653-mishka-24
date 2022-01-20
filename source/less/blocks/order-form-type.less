@@ -1,0 +1,65 @@
+.order-form-type {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 31px;
+}
+
+.order-form-type__title {
+  margin-bottom: 30px;
+}
+
+.order-form-type__title-mark {
+  font-style: normal;
+  font-weight: bold;
+  font-size: @menu-size;
+  line-height: 0.94;
+  text-transform: uppercase;
+  color: @btn-left-color;
+}
+
+.order-form-type__title-mark::after { /*не вижу этого элемента*/
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 2px;
+  color: @btn-left-color;
+}
+
+.order-form-type__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-form-type__label::before {
+  content: " ";
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: transparent;
+  border: 2px solid @txt-color;
+  margin-right: 19px;
+}
+
+
+.order-form-type__input:checked + .order-form-type__label::after {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: @form-color;
+}
+
+
+.order-form-type__mark {
+  width: 200px;
+  font-weight: bold;
+  font-size: @menu-size;
+  line-height: 1.06;
+}
