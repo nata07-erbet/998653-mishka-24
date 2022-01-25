@@ -1,4 +1,19 @@
+/* stylelint-disable CssSyntaxError */
+.baskets__wrapper {
+  outline: 2px solid deeppink;
+  offset: -2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.baskets__title-wrapper {
+  justify-content: center;
+  align-self: center;
+}
+
 .baskets__title {
+  align-self: flex-start;
   font-weight: bold;
   font-size: @subtitle-size;
   line-height: @subtitle-line;
@@ -7,6 +22,7 @@
 }
 
 .baskets__stock {
+  align-self: flex-start;
   font-size: @offer-size;
   line-height: @offer-line;
   font-weight: bold;
@@ -17,6 +33,7 @@
 
 .baskets__description,
 .baskets-table {
+  align-self: flex-start;
   font-weight: normal;
   font-size: @txt-size;
   line-height: 1.6;
@@ -24,19 +41,94 @@
 }
 
 .baskets__image {
-  display: block;
+  background-image: url("../img/triple-set-mobile.jpg"); /*нет изображения*/
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 260px;
+  height: 315px;
   margin-bottom: 26px;
+  order: 1;
 }
 
 .baskets__price {
+  order: 1;
   margin: 0;
   font-weight: bold;
   font-size: @offer-size;
   line-height: @offer-line;
   text-align: center;
   margin-bottom: 25px;
+  align-self: center;
 }
 
 .baskets__button-order {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  order: 2;
+  margin: 0 auto;
   margin-bottom: 36px;
 }
+
+@media (min-width: @tablet-width) {
+  .baskets__wrapper {
+    display: grid;
+    grid-template-columns: 334px 234px 100px; /*cетка получлась из 2- колонок*/
+    grid-area: "title title stock"
+                "description image image"
+                "table image image"
+                "price image image"
+                "button image image";
+              }
+
+  .baskets__title {
+    grid-area: title;
+  }
+
+  .baskets__image {
+    display: block;
+    background-image: url("../img/triple-set-tablet.jpg"); /*нет изображения*/
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: image;
+  }
+
+  .baskets__stock {
+    grid-area: stock;
+  }
+
+  .baskets__description {
+    grid-area: description;
+  }
+
+  .baskets__table {
+    grid-area: table;
+  }
+
+  .baskets__price {
+    grid-area: price;
+  }
+
+  .baskets__button-order {
+    grid-area: button;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .baskets__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .baskets__stock {
+    display: block;
+    position: absolute;
+  }
+
+  .baskets__image {
+    display: block;
+    background-image: url("../img/triple-set-desktop.jpg"); /*нет изображения*/
+    background-repeat: no-repeat;
+    background-position: center;
+  }

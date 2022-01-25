@@ -12,8 +12,47 @@
   padding-bottom: 120px;
 }
 
-.toys__header { /*как сделать правильный перенос текста*/
+.toys__header {
+  /*как сделать правильный перенос текста*/
   width: 260px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .toys__image {
+    display: inline-block;
+    position: relative;
+    top: -85px;
+    z-index: -1;
+    background-image: url("../img/hero-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 746px;
+    height: auto; /*как сделать, чтобы картинка автоматчески сайзлась?*/
+    max-width: 100%;
+    padding-top: 155px;
+    padding-bottom: 491px;
+    margin: 0;
+  }
+
+  .toys__header {
+    font-size: 43px;
+    line-height: 1.16;
+    min-width: 668px;
+    min-height: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .toys__image {
+    display: inline-block;
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 1150px;
+    max-width: 100%;
+    min-height: 746px;
+    max-height: auto;
+  }
 }

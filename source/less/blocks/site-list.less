@@ -1,9 +1,25 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid dodgerblue;
+  offset: -2px;
+}
+
 .site-list__item-link {
   display: block;
   color: @caption-color;
   text-decoration: none;
   padding-top: 28px;
   padding-bottom: 27px;
-  outline: 2px solid plum;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: auto;
+  }
 }

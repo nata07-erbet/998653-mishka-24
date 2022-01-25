@@ -1,9 +1,49 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .user-list__item-link {
-  display: block;
   color: @caption-color;
   text-decoration: none;
   padding-top: 28px;
   padding-bottom: 27px;
-  outline: 2px solid plum;
   text-align: center;
+}
+
+.user-list__item-search {
+  visibility: hidden;
+}
+
+.user-list__item--search {
+  width: 82px;
+  height: 89px;
+  border: 1px solid fade(@caption-color, 10%);
+}
+
+.user-list__item--basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Бесплатная доставка по России - написать прямо в разметке и скрыть для мобильны х версий?*/
+@media (min-width: @tablet-width) {
+  .user-list {
+    width: 348px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list {
+    display: flex;
+    order: 2;
+    width: 375px;
+    background-color: lightgreen;
+    margin-left: auto;
+  }
 }

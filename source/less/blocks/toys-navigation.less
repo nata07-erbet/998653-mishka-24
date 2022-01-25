@@ -1,8 +1,15 @@
-.toys-navigation-list {
+.toys-navigation__wrapper {
+  margin: 0 auto;
+}
+
+.toys-navigation__list {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 31px;
 }
 
 .toys-navigation__button {
+  width: 100%;
   padding: 0;
   padding-top: 24px;
   padding-bottom: 31px;
@@ -12,7 +19,6 @@
   line-height: 24px;
   margin: 0;
   border: none;
-  width: 320px;
 
   &--interios {
     background-color: @btn-left-color;
@@ -25,6 +31,31 @@
 
 .toys-navigation-caption {
   display: block;
-  width: 130px;
   margin-left: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .toys-navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .toys-navigation__button {
+    min-width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .toys-navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
+
+  .toys-navigation__button {
+    display: block;
+    min-width: 525px; /*не могу сайзить*/
+    width: 100%;
+  }
 }
