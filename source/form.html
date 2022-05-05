@@ -26,15 +26,15 @@
         <ul class="main-nav__list user-list list-reset">
           <li class="main-nav__item user-list__item">
             <a class="user-list__item-link link" href="#"> <span class="user-list__item-search">Поиск</span>
-              <!--
+
                       <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
                       <label class="search-form__label" for="search"> </label>
-                      <input class="search-form__label visually-hidden"  type ="search" id="search">
+                      <input class="search-form__control visually-hidden"  type ="search" id="search">
                       <svg  class="search-form__label-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path opacity="0.2" d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" fill="black"/>
                       </svg>
                     </form>
-                    -->
+
             </a>
           </li>
           <li class="main-nav__item user-list__item">
@@ -85,114 +85,114 @@
 
     <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
       <div class="container">
-        <fieldset class="order-form__type">
-          <legend class="order-form__type-title">
-            <span class="order-form__type-title-mark">
+        <fieldset class="order-form-type">
+          <legend class="order-form-type__legend">
+            <span class="order-form-type__mark">
               Тип
             </span>
           </legend>
-          <input class="order-form__type-input visually-hidden" type="radio" id="interior" checked>
-          <label class="order-form__type-label " for="interior">
-            <span class="order-form__type-mark">
+          <input class="order-form-type__control visually-hidden" type="radio" id="interior" checked>
+          <label class="order-form-type__label " for="interior">
+            <span class="order-form-type__mark">
               Аксессуар для интерьера
             </span>
           </label>
-          <input class="order-form__type-input visually-hidden" type="radio" id="toy">
-          <label class="order-form__type-label" for="toy">
-            <span class="order-form__type-mark">
+          <input class="order-form-type__control visually-hidden" type="radio" id="toy">
+          <label class="order-form-type__label" for="toy">
+            <span class="order-form-type__mark">
               Детская игрушка
             </span>
           </label>
         </fieldset>
 
         <fieldset class="order-form-color">
-          <legend class="order-form-color__title">
-            <span class="order-form-color__title-mark">
+          <legend class="order-form-color__legend">
+            <span class="order-form-color__mark">
               Цвет
             </span>
           </legend>
-          <input class="order-form-color__input visually-hidden" type="checkbox" id="white" name="white" checked>
+          <input class="order-form-color__control visually-hidden" type="checkbox" id="white" name="white" checked>
           <label class="order-form-color__label" for="white">
-            <span class="order-form-color__label-mark">
+            <span class="order-form-color__mark">
               Белый
             </span>
           </label>
-          <input class="order-form-color__input visually-hidden" type="checkbox" id="gray" name="gray" checked>
+          <input class="order-form-color__control visually-hidden" type="checkbox" id="gray" name="gray" checked>
           <label class="order-form-color__label" for="gray">
-            <span class="order-form-color__label-mark">
+            <span class="order-form-color__mark">
               Серый
             </span>
           </label>
-          <input class="order-form-color__input visually-hidden" type="checkbox" id="tiff" name="tiff">
+          <input class="order-form-color__control visually-hidden" type="checkbox" id="tiff" name="tiff">
           <label class="order-form-color__label" for="tiff">
-            <span class="order-form-color__label-mark">
+            <span class="order-form-color__mark">
               Тиффани
             </span>
           </label>
-          <input class="order-form__color-input visually-hidden" type="checkbox" id="black" name="black">
-          <label class="order-form__color-label" for="black">
-            <span class="order-form__color-label-mark">
+          <input class="order-form-color__control visually-hidden" type="checkbox" id="black" name="black">
+          <label class="order-form-color__label" for="black">
+            <span class="order-form-color__label-mark">
               Черный
             </span>
           </label>
-          <input class="order-form__color-input visually-hidden" type="checkbox" id="pink" name="pink">
-          <label class="order-form__color-label" for="pink">
-            <span class="order-form__color-label-mark">
+          <input class="order-form-color__control visually-hidden" type="checkbox" id="pink" name="pink">
+          <label class="order-form-color__label" for="pink">
+            <span class="order-form-color__mark">
               Розовый
             </span>
           </label>
-          <input class="order-form__color-input visually-hidden" type="checkbox" id="orange" name="orange">
+          <input class="order-form__color-control visually-hidden" type="checkbox" id="orange" name="orange">
           <label class="order-form__color-label" for="orange">
-            <span class="order-form__color-label-mark">
+            <span class="order-form__color-mark">
               Оранжевый
             </span>
           </label>
         </fieldset>
 
-        <fieldset class="order-form__contacts">
-          <legend class="order-form__contacts-title">Фио</legend>
-          <label class="order-form__contacts-label" for="name">
-            <span class="order-form__contacts-label-mark">
+        <fieldset class="order-form-contacts">
+          <legend class="order-form-contacts__legend">Фио</legend>
+          <label class="order-form-contacts__label" for="name">
+            <span class="order-form__mark">
               Имя:
             </span>
           </label>
-          <input class="order-form__contacts-input contacts-input" type="text" id="name"
+          <input class="order-form-contacts__control contacts-input" type="text" id="name"
             placeholder="Введите ваше имя*">
-          <label class="order-form__contacts-label" for="surname">
-            <span class="order-form__contacts-label-mark">
+          <label class="order-form-contacts__label" for="surname">
+            <span class="order-form__contacts__mark">
               Фамилия:
             </span>
           </label>
-          <input class="order-form__contacts-input contacts-input" type="text" id="surname"
+          <input class="order-form-contacts__control contacts-input" type="text" id="surname"
             placeholder="Укажите фамилию*">
-          <label class="order-form__contacts-label" for="lastname">
-            <span class="order-form__contacts-label-mark">
+          <label class="order-form-contacts__label" for="lastname">
+            <span class="order-form-contacts__mark">
               Отчество:
             </span></label>
-          <input class="order-form__contacts-input" type="text" id="lastname" placeholder="Отчество, если желаете">
-        </fieldset>
-
-        <fieldset class="order-form__contacts">
-          <legend class="order-form__contacts-title order-form__contacts-title--tel">тел</legend>
-          <label class="order-form__contacts-label order-form__contacts-label--tel" for="tel"></label>
-          <!--модификаторы для иконок-->
-          <input class="order-form__contacts-input" type="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-        </fieldset>
-
-        <fieldset class="order-form__contacts">
-          <legend class="order-form__contacts-title order-form__contacts-title--email">E-mail</legend>
-          <label class="order-form__contacts-label-emal order-form__contacts-label-emal--mail" for="e-mail"></label>
-          <input class="order-form__contacts-input" type="e-mail" id="e-mail" placeholder="Ваш E-mail*">
+          <input class="order-form-contacts__control" type="text" id="lastname" placeholder="Отчество, если желаете">
         </fieldset>
 
         <fieldset class="order-form-contacts">
-          <legend class="order-form-contacts-title">Доп</legend>
-          <label class="order-form__contacts-label " for="wishlist"></label>
-          <textarea class="order-form__contacts-input-text" name="wishlist" id="wishlist">Опишите все ваши пожелания к заказу
+          <legend class="order-form-contacts__legend order-form-contacts__legend--tel">тел</legend>
+          <label class="order-form-contacts__label order-form-contacts__label--tel" for="tel"></label>
+          <!--модификаторы для иконок-->
+          <input class="order-form-сontacts__control" type="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+        </fieldset>
+
+        <fieldset class="order-form-contacts">
+          <legend class="order-form-contacts__legend order-form-contacts__legend--email">E-mail</legend>
+          <label class="order-form-contacts__label order-form-contacts__label--mail" for="e-mail"></label>
+          <input class="order-form-contacts__control" type="e-mail" id="e-mail" placeholder="Ваш E-mail*">
+        </fieldset>
+
+        <fieldset class="order-form-contacts">
+          <legend class="order-form-contacts__legend">Доп</legend>
+          <label class="order-form-contacts__label " for="wishlist"></label>
+          <textarea class="order-form-contacts__textarea" name="wishlist" id="wishlist">Опишите все ваши пожелания к заказу
           </textarea>
         </fieldset>
 
-        <small class="order-form__contacts-warning">*Поля обязательны для заполнения</small>
+        <small class="order-form__warning">*Поля обязательны для заполнения</small>
         <button class="button order-form__button-send" type="button">ОТПРАВИТЬ ЗАКАЗ</button>
       </div>
 
