@@ -3,6 +3,13 @@
   margin-bottom: 58px;
 }
 
+.about__list { /*не стал flex-элементом*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .about__title {
   font-weight: bold;
   font-size: @subtitle-size;
@@ -15,4 +22,26 @@
   font-size: @offer-size;
   line-height: @offer-line;
   margin-top: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .about__list {
+    background-color: firebrick; /*пропал стили*/
+    display: grid;
+    max-width: 668px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__list {
+    background-color: firebrick; /*пропал стили*/
+    display: grid;
+    max-width: 668px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,9 +1,9 @@
-§
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -11,12 +11,8 @@
 <body class="page__body">
   <header class="page-header">
     <div class="container">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <!--обертка для позиционирования лого-->
-          <img src="./img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип кампании">
-        </a>
-      </div>
+      <a class="page-header__logo">
+      </a>
 
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button">
@@ -25,6 +21,8 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list user-list">
             <li class="main-nav__item user-list__item">
+
+
               <a class="user-list__item-link link" href="#"> <span class="user-list__item-search">Поиск</span>
                 <!--
                       <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
@@ -37,7 +35,7 @@
                     -->
               </a>
             </li>
-            <li class="main-nav__item user-list__item">
+            <li class="main-nav__item user-list__item user-list__item--basket">
               <a class="user-list__item-link" href="#">
                 <svg class="main-nav__search-icon" width="21" height="18" viewBox="0 0 21 18" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +64,7 @@
             </li>
           </ul>
         </div>
+
       </nav>
     </div>
   </header>
@@ -79,7 +78,8 @@
       </div>
       <nav class="toys-navigation">
         <div class="toys-navigation__wrapper">
-          <ul class="toys-navigation__list"> <!--не прошла примесь-->
+          <ul class="toys-navigation__list">
+            <!--не прошла примесь-->
             <li class="toys-navigation__item">
               <button class="toys-navigation__button toys-navigation__button--interios" type="button">
                 <span class="toys-navigation-caption">Предметы интерьера</span>
@@ -107,41 +107,49 @@
             Экологически чистая пряжа, ручная работа.
             Доступны в шести расцветках и трёх размерах.
           </p>
-          <div class="baskets__properties">
-            <table class="baskets-table">
-              <tr>
-                <td class="baskets__properties-characteristic">Цвет:</td>
-                <td class="baskets__properties-description">тиффани/серый</td>
-              <tr>
-                <td class="baskets__properties-characteristic">Диаметр:</td>
-                <td class="baskets__properties-description">25 см</td>
-              </tr>
-              <tr>
-                <td class="baskets__properties-characteristic">Высота:</td>
-                <td class="baskets__properties-description">15 см</td>
-              </tr>
-            </table>
+          <table class="baskets__table">
+            <tr>
+              <td class="baskets__properties-characteristic">Цвет:</td>
+              <td class="baskets__properties-description">тиффани/серый</td>
+            <tr>
+              <td class="baskets__properties-characteristic">Диаметр:</td>
+              <td class="baskets__properties-description">25 см</td>
+            </tr>
+            <tr>
+              <td class="baskets__properties-characteristic">Высота:</td>
+              <td class="baskets__properties-description">15 см</td>
+            </tr>
+          </table>
 
-            <img class="baskets__image" src="./img/triple-set-mobile.jpg" width="260" height="315"
-              alt="три вязаных корзинки">
-            <p class="baskets__price">Цена: 990 руб.</p>
-            <button class="baskets__button-order" type="button">ЗАКАЗАТЬ</button>
+          <div class="baskets__image">
           </div>
+          <p class="baskets__price">Цена: 990 руб.</p>
+          <button class="baskets__button-order" type="button">ЗАКАЗАТЬ</button>
         </div>
+      </div>
       </div>
     </section>
 
     <section class="about">
       <div class="container">
-        <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about-list list-reset">
-          <li class="about__item about__item--material">Экологически чистые материалы</li>
-          <li class="about__item about__item--slyle">Скандинавский стиль по российской цене</li>
-          <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="about__item about__item--love">Связано вручную с любовью и умилением</li>
-          <li class="about__item about__item--support">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--present">Поставляется в подарочной упаковке</li>
-        </ul>
+        <div class="about__wrapper">
+          <h2 class="about__title">Коротко о нас:</h2>
+          <ul class="about__list list-reset">
+            <div class="about__list-column1">
+              <li class="about__item about__item--material">Экологически чистые материалы</li>
+              <li class="about__item about__item--slyle">Скандинавский стиль по российской цене</li>
+              <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
+            </div>
+
+            <div class="about__list-column2">
+              <li class="about__item about__item--love">Связано вручную с любовью и умилением</li>
+              <li class="about__item about__item--support">Поддержка отечественного производителя</li>
+              <li class="about__item about__item--present">Поставляется в подарочной упаковке</li>
+            </div>
+
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -236,7 +244,8 @@
               </a>
             </li>
           </ul>
-        </div></section>
+        </div>
+      </section>
       <section class="copyright">
         <div class="copyright__wrapper">
           <h2 class="copyright__title visually-hidden">Копирайт</h2>
