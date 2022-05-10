@@ -1,49 +1,44 @@
 .user-list {
   display: flex;
   flex-direction: column;
-}
 
-.user-list__item-link {
-  color: @caption-color;
-  text-decoration: none;
-  padding-top: 28px;
-  padding-bottom: 27px;
-  text-align: center;
-}
-
-.user-list__item-search {
-  visibility: hidden;
-}
-
-.user-list__item--search {
-  width: 82px;
-  height: 89px;
-  border: 1px solid fade(@caption-color, 10%);
-}
-
-.user-list__item--basket {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*Бесплатная доставка по России - написать прямо в разметке и скрыть для мобильны х версий?*/
-@media (min-width: @tablet-width) {
-  .user-list {
-    width: 348px;
+  @media (min-width: @tablet-width) {
+    min-width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: auto;
+    align-items: center;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .user-list {
-    display: flex;
-    order: 2;
-    width: 375px;
-    background-color: lightgreen;
-    margin-left: auto;
+
+.user-list__item-link {
+  display: flex;
+  justify-content: center;
+  .main-nav__link();
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    padding: 0;
+    border: none;
+  }
+}
+
+.user-list__icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-list__item-search {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.user-list__icon--search {
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @search-border;
+    border-right: 1px solid @search-border;
   }
 }
