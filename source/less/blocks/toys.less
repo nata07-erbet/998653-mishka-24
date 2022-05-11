@@ -1,3 +1,7 @@
+.toys {
+  margin-bottom: 31px;
+}
+
 .toys__image {
   display: block;
   min-height: 373px;
@@ -10,24 +14,36 @@
     background-image: url("../img/hero-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1150px 746px;
     padding-top: 155px;
+    margin-top: -63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/hero-desktop 1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1150px 763px;
+    padding-top: 155px;
+    margin-top: -63px;
   }
 }
 
+
 .toys__header {
   /*как сделать правильный перенос текста*/
-  min-width: 260px;
+  width: 260px;
   margin: 0 auto;
+  font-size: @mobil-title-size;
+  line-height: @mobil-title-line;
   text-align: center;
   font-weight: 700;
-  font-size: 27px;
-  line-height: 30px;
+
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
-    line-height: 1.16;
-    min-width: 668px;
-    min-height: 100px;
+    width: 668px;
+    font-size: @tablet-title-size;
+    line-height: @tablet-title-line;
   }
 }
 

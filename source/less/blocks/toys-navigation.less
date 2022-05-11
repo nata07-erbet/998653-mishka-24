@@ -1,24 +1,35 @@
-.toys-navigation__wrapper {
-  margin: 0 auto;
-}
-
 .toys-navigation__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 31px;
+  margin: 0 auto;
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .toys-navigation__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0;
   padding-top: 24px;
   padding-bottom: 31px;
-  color: #ffffff;
+  color: @bg-color;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
-  margin: 0;
+  margin: 0 auto;
   border: none;
 
   &--interios {
@@ -28,35 +39,17 @@
   &--child {
     background-color: @btn-right-color;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-right: 33px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 25px 35px;
+  }
 }
 
 .toys-navigation-caption {
-  display: block;
-  margin-left: 30px;
-}
-
-@media (min-width: @tablet-width) {
-  .toys-navigation__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .toys-navigation__button {
-    min-width: 334px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .toys-navigation__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between
-  }
-
-  .toys-navigation__button {
-    display: block;
-    min-width: 525px; /*не могу сайзить*/
-    width: 100%;
-  }
+  justify-content: flex-start;
+  width: 130px;
 }

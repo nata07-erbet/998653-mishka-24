@@ -3,6 +3,22 @@
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
 .page__body {
   min-height: 100%;
   margin: 0 auto;
@@ -13,4 +29,3 @@
   font-size: @txt-size;
   line-height: @txt-line;
 }
-

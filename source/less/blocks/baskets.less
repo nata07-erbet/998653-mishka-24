@@ -1,24 +1,62 @@
 /* stylelint-disable CssSyntaxError */
 .baskets__wrapper {
-  outline: 2px solid deeppink;
+  position: relative;
   offset: -2px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.baskets__title-wrapper {
-  justify-content: center;
-  align-self: center;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "desc img"
+      "table img"
+      "price img"
+      "btn img";
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 225px;
+    grid-column: 350px 195px 1fr;
+    grid-template-areas:
+      "title title img"
+      "desc desc img"
+      "table table img"
+      "price price img"
+      "btn btn img";
+    column-gap: 0;
+  }
+
 }
 
 .baskets__title {
+  grid-area: title;
   align-self: flex-start;
   font-weight: bold;
   font-size: @subtitle-size;
   line-height: @subtitle-line;
   margin: 0 0 4px 0;
   margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 43px;
+    font-weight: 700;
+    font-size: @tablet-title-size;
+    line-height: @tablet-title-line;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: @desktop-title-size;
+    line-height: @desktop-title-line;
+  }
 }
 
 .baskets__stock {
@@ -29,28 +67,100 @@
   color: @btn-left-color;
   text-transform: uppercase;
   margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right:0;
+    width: 100px;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {;
+    top: 60px;
+    left: -160px;
+  }
+
 }
 
 .baskets__description,
 .baskets-table {
   align-self: flex-start;
-  font-weight: normal;
   font-size: @txt-size;
   line-height: 1.6;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @menu-size;
+    line-height: 1.76;
+  }
+}
+
+.baskets__description {
+  grid-area: desc;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-right: 58px;
+    margin-bottom: 60px;
+  }
+
+
+
+}
+
+.baskets__table {
+  grid-area: table;
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 109px;
+  }
+}
+
+.baskets__table-row {
+  border-bottom: 1px solid red; //не сработало
 }
 
 .baskets__image {
-  background-image: url("../img/triple-set-mobile.jpg"); /*нет изображения*/
+  grid-area: img;
+  background-image: url("../img/triple-set-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   width: 260px;
   height: 315px;
   margin-bottom: 26px;
-  order: 1;
+
+  @media (max-width: @mobile-width-only) {
+    order: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/triple-set-tablet.jpg");
+    width: 100%;
+    height: 404px;
+    margin-bottom: 0;
+    //не работает атрибут//
+    // background-size: 334px 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/triple-set-desktop.jpg");
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .baskets__price {
+  grid-area: price;
   order: 1;
   margin: 0;
   font-weight: bold;
@@ -59,9 +169,14 @@
   text-align: center;
   margin-bottom: 25px;
   align-self: center;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .baskets__button-order {
+  grid-area: btn;
   display: flex;
   justify-content: center;
   align-self: flex-start;
@@ -69,65 +184,4 @@
   margin: 0 auto;
   margin-bottom: 36px;
   .button();
-}
-
-@media (min-width: @tablet-width) {
-  .baskets__wrapper {
-    display: grid;
-    grid-template-columns: 334px 234px 100px; /*cетка получлась из 2- колонок*/
-    grid-area: "title title stock" "description image image" "table image image"
-      "price image image" "button image image";
-  }
-
-  .baskets__title {
-    grid-area: title;
-  }
-
-  .baskets__image {
-    display: block;
-    background-image: url("../img/triple-set-tablet.jpg"); /*нет изображения*/
-    background-repeat: no-repeat;
-    background-position: center;
-    grid-area: image;
-  }
-
-  .baskets__stock {
-    grid-area: stock;
-  }
-
-  .baskets__description {
-    grid-area: description;
-  }
-
-  .baskets__table {
-    grid-area: table;
-  }
-
-  .baskets__price {
-    grid-area: price;
-  }
-
-  .baskets__button-order {
-    grid-area: button;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .baskets__wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .baskets__stock {
-    display: block;
-    position: absolute;
-  }
-
-  .baskets__image {
-    display: block;
-    background-image: url("../img/triple-set-desktop.jpg"); /*нет изображения*/
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 }
