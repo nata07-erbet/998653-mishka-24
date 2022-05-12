@@ -1,26 +1,74 @@
-.contacts {
+.contacts__wrapper {
   padding-top: 38px;
+  margin-bottom: 62px;
+
+  @media (min-width: @tablet-width) {
+   // display: grid;
+    //grid-template-columns: 1fr 1fr;
+   // grid-template-areas:
+    //  "title icon"
+     // "data caption";
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 49px;
+  }
 }
 
-
 .contacts__title {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 28px;
   font-size: @subtitle-size;
   line-height: @subtitle-size;
   color: @caption-color;
-  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 600px;
+    flex-grow: 1;
+    font-size: @tablet-title-size;
+    line-height: 1.16;
+  }
+}
+
+.contacts__icon-flag {
+  grid-area: icon;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
 }
 
 .contacts__data {
+  grid-area: data;
+  margin: 0;
   font-size: @contact-size;
   line-height: @contact-line;
-  margin: 0;
-  margin-bottom: 62px;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contacts__caption {
+  grid-area: caption;
   margin: 0;
-  margin-bottom: 20px; /*написала, чтобы не сливались*/
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
 }
 
 .contacts__caption-link {
@@ -29,4 +77,9 @@
   color: @txt-color;
   text-decoration: none;
   margin-bottom: 20px; /*написала, чтобы не сливались*/
+}
+
+.contacts__caption-point {
+  width: 257px;
+  column-gap: 20px;
 }

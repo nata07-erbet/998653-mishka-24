@@ -1,16 +1,28 @@
 .reviews__wrapper {
   position: relative;
-  padding-top: 80px;
-  padding-left: 50px;
-  //background-image: url("../img/review_tablet.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/review_tablet.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tit btn"
+      "slider slider"
+      "slider slider";
+    padding-top: 83px;
+    padding-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
-    border: none;
+    background-image: url("../img/review_tablet.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-top: 78px;
+    padding-bottom: 96px;
+    margin-bottom: 71px;
   }
 }
 
@@ -23,12 +35,22 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
+    align-self: center;
     margin-bottom: 40px;
+    font-size: @tablet-title-size;
+    line-height: 1.16;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 35px;
+    font-size: @desktop-title-size;
+    line-height: 1.08;
   }
 }
 
 .reviews-list {
   grid-area: slider;
+  margin-bottom: 30px;
 }
 
 .reviews__item {
@@ -40,6 +62,14 @@
   line-height: 2;
   margin: 0;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author-name {
@@ -60,15 +90,30 @@
 }
 
 .reviews__toggles {
-  grid-area: toogle;
+  margin: 0;
+  grid-area: toggle;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    transform: translateY(-25px);
+    right: 0;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(-50px);
+  }
 }
 
 .reviews__button-send {
   margin-bottom: 45px;
+  grid-area: btn;
   .button();
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
+    width: 175px;
+    height: 52px;
+    font-size: @offer-size;
+    justify-self: end;
   }
 }

@@ -1,21 +1,31 @@
-.social {
-  margin-bottom: 29px;
-}
 
 .social__wrapper {
   width: 260px;
   padding-top: 29px;
-  padding-bottom: 31px;
+  padding-bottom: 27px;
   border-bottom: 2px solid @line-color;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+  }
 }
 
 .social__title {
   margin: 0;
 }
 
-.social-list {
+.page-footer__logo-image {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  .list-reset();
 }
 
 .social__item {
