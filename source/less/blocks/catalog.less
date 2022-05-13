@@ -1,10 +1,18 @@
-.catalog {
+.catalog__wrapper {
   margin-bottom: 30px;
 }
 
-.catalog__item {
-  border: 1px solid @border-color;
+.catalog__list {
+  .list-reset();
 
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    column-gap: 51px;
+  }
+}
+
+.catalog__item {
   &:not(:last-child) {
     margin-bottom: 30px;
   }
