@@ -1,25 +1,87 @@
-
 .production__wrapper {
-  padding-top: 22px;
-  padding-right: 13px;
-  padding-bottom: 27px;
-  padding-left: 91px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.production__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 22px 13px 27px 34px;
+  border: 1px solid @border-color;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    gap: 30px;
+    border: none;
+    padding-top: 41px;
+    padding-left: 42px;
+  }
+}
+
+.production__video-icon {
 }
 
 .production__content {
-  padding: 35px 0 33px 34px;
+  padding-bottom: 46px;
+  padding-left: 40px;
 }
 
 .production__title {
   margin: 0;
   font-size: @menu-size;
   line-height: @menu-line;
-  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.production__video__wrapper {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    width: 260px;
+    height: 15px;
+    background-image: url("../img/video.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 445px;
+    background-image: url("../img/video-tablet 1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    order: -1;
+  }
+}
+
+.production__video-button-play {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
 }
 
 .production__video {
   display: block;
-  margin-bottom: 35px;
+}
+
+.production__video-button-play {
+  //не вижу этого блока
+  position: absolute;
+  width: 101px;
+  height: 77px;
 }
 
 .production__text {
@@ -30,7 +92,11 @@
 }
 
 .production__button-order {
+  .button();
   width: 192px;
   padding: 18px 11px;
-  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    width: 584px;
+  }
 }
