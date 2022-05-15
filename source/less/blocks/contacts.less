@@ -1,32 +1,29 @@
 .contacts__wrapper {
-  padding-top: 38px;
-  margin-bottom: 62px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-  @media (min-width: @tablet-width) {
-   // display: grid;
-    //grid-template-columns: 1fr 1fr;
-   // grid-template-areas:
-    //  "title icon"
-     // "data caption";
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 49px;
-  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 16% 33% 50%;
+    grid-template-areas:
+      "icon title map"
+      "icon contacts map"
+      "icon button map";
 }
 
 .contacts__title {
   grid-area: title;
   margin: 0;
+  margin-top: 38px;
   margin-bottom: 28px;
   font-size: @subtitle-size;
   line-height: @subtitle-size;
-  color: @caption-color;    
+  color: @caption-color;
 
   @media (min-width: @tablet-width) {
     min-width: 600px;
+    margin-bottom: 49px;
     flex-grow: 1;
     font-size: @tablet-title-size;
     line-height: 1.16;
@@ -41,13 +38,40 @@
   }
 
   @media (min-width: @tablet-width) {
-    justify-self: end;
+    position: absolute;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.contacts__address {
+  grid-area: contacts;
+  position: relative;
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 
 .contacts__data {
   grid-area: data;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
+  margin-bottom: 44px;
   font-size: @contact-size;
   line-height: @contact-line;
   font-style: normal;
@@ -56,30 +80,67 @@
     display: flex;
     column-gap: 20px;
     justify-content: center;
-    align-items: center;
   }
+}
+
+.contacts__data-address {
+  margin: 0;
+}
+
+.contacts__data-link {
+  width: 183px;
+  font-size: @contact-size;
+  line-height: @contact-line;
+  color: @txt-color;
 }
 
 .contacts__caption {
   grid-area: caption;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    align-items: center;
     column-gap: 20px;
   }
 }
 
-.contacts__caption-link {
-  display: block;
+.contacts__caption-address {
   margin: 0;
-  color: @txt-color;
-  text-decoration: none;
-  margin-bottom: 20px; /*написала, чтобы не сливались*/
+  font-weight: 400;
+  font-size: @contact-size;
+  line-height: @contact-line;
 }
 
 .contacts__caption-point {
-  width: 257px;
-  column-gap: 20px;
+  width: 183px; // указывать или нет?
+  margin: 0;
+  font-weight: 400;
+  font-size: @contact-size;
+  line-height: @contact-line;
+}
+
+.contacts__map {
+  max-height: 455px;
+  margin: 0 -30px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: 55px;
+  }
+}
+
+.contacts__button-send {
+  .button();
+  grid-area: button;
+  width: 260px;
+  padding: 16px 38px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+  margin-bottom: 39px;
 }
