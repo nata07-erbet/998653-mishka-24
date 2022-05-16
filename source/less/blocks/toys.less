@@ -25,20 +25,17 @@
     background-position: center;
     background-size: 1150px 763px;
     padding-top: 155px;
-    margin-top: -63px;
+    margin-top: 0;
   }
 }
 
-
 .toys__header {
-  /*как сделать правильный перенос текста*/
   width: 260px;
   margin: 0 auto;
   font-size: @mobil-title-size;
   line-height: @mobil-title-line;
   text-align: center;
   font-weight: 700;
-
 
   @media (min-width: @tablet-width) {
     width: 668px;
@@ -54,8 +51,13 @@
     background-position: center;
     background-repeat: no-repeat;
     min-width: 1150px;
-    max-width: 100%;
+    width: 100%;
     min-height: 746px;
-    max-height: auto;
   }
 }
+
+.toys__header-wrap {
+  white-space: nowrap;
+}
+
+

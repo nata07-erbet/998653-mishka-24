@@ -10,6 +10,7 @@
       "icon title map"
       "icon contacts map"
       "icon button map";
+  }
 }
 
 .contacts__title {
@@ -28,6 +29,11 @@
     font-size: @tablet-title-size;
     line-height: 1.16;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: 79px;
+  }
 }
 
 .contacts__icon-flag {
@@ -39,10 +45,13 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    right: 0;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
+    justify-self: center; // почему не сработало?
+    margin-top: 50px;
   }
 }
 
@@ -62,6 +71,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 35px;
   }
 }
 
@@ -81,6 +91,10 @@
     column-gap: 20px;
     justify-content: center;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .contacts__data-address {
@@ -88,7 +102,7 @@
 }
 
 .contacts__data-link {
-  width: 183px;
+  border-bottom: 1px solid @form-color;
   font-size: @contact-size;
   line-height: @contact-line;
   color: @txt-color;
@@ -115,7 +129,7 @@
 }
 
 .contacts__caption-point {
-  width: 183px; // указывать или нет?
+  width: 168px; // указывать или нет?
   margin: 0;
   font-weight: 400;
   font-size: @contact-size;
@@ -123,14 +137,14 @@
 }
 
 .contacts__map {
+  grid-area: map;
   max-height: 455px;
   margin: 0 -30px;
   overflow: hidden;
+  background-color: antiquewhite; //потом уберу
 
   @media (min-width: @tablet-width) {
-    margin-left: -50px;
-    margin-right: -50px;
-    margin-bottom: 55px;
+    margin: 0 -50px;
   }
 }
 
@@ -143,4 +157,17 @@
   margin-right: auto;
   margin-top: 42px;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 55px;
+    margin-bottom: 57px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    height: 55px;
+    justify-self: flex-start; //почему не срабортало?
+    padding: 16px 27px;
+    margin: 0;
+    margin-top: 85px;
+  }
 }

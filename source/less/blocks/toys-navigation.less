@@ -1,8 +1,12 @@
+.toys-navigation {
+  margin-top: -70px;
+}
+
 .toys-navigation__list {
+  .list-reset();
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  .list-reset();
+  margin: 0 -30px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -17,11 +21,20 @@
   }
 }
 
+.toys-navigation__item {
+  width: 334px;
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+
+}
+
 .toys-navigation__button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
   padding: 0;
   padding-top: 24px;
   padding-bottom: 31px;
