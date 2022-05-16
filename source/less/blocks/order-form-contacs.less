@@ -1,4 +1,4 @@
-.order-form-contacs {
+.order-form-contacts {
   border: none;
   margin: 0;
   padding: 0;
@@ -9,50 +9,38 @@
   margin-bottom: 0; /*не обнулился отступ*/
 }
 
-
-.order-form-contacs__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: @menu-size;
-  line-height: 0.94;
-  text-transform: uppercase;
-  color: @btn-left-color;
-  margin-bottom: 29px;
+.order-form-contacts__legend {
 }
 
-.order-form-type__title-mark::after { /*не вижу этого элемента*/
-  content: "";
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 2px;
-  background-color: @btn-left-color;
+.order-form-contacts__mark {
+  .order-text-title();
 }
 
-.order-form-contacs__label-mark {
+.order-form-contacts__wrapper {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
-  font-size: @menu-size;
-  line-height: 1.06;
 }
 
-.order-form-contacs__input {
-  font-family: inherit;
-  font-size: @offer-size;
-  line-height: 1.06;
-  min-width: 260px;
-  min-height: 52px;
-  border: none;
-  border-bottom: 2px solid @caption-color;
+.order-form-contacts__wrapper:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.order-form-contacts__data {
+  .order-text();
+}
+
+.order-form-contacts__control {
   padding: 17px 0;
+  border-bottom: 2px solid @caption-color;
+  box-shadow: inset 0px -2px 0px #000000;
+  .input-reset();
 }
 
-.order-form-contacs__input::placeholder {
-  color: fade(@caption-color, 30%);
+.order-form-contacs__control::placeholder {
+  .input-placeholder-reset();
 }
 
-.contacts-input {
+.contacts-control {
   margin-bottom: 22px;
 }
 
@@ -61,7 +49,7 @@
   margin-bottom: 5px;
 }
 
-.order-form-contacs__input-text {
+.order-form-contacs__control-text {
   border: 2px solid @txt-color;
   width: 260px;
   min-height: 142px;
