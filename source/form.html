@@ -164,7 +164,7 @@
         </fieldset>
 
         <fieldset class="order-form-contacts">
-          <legend class="order-form-contacts__legend">
+          <legend class="order-form-contacts__legend order-form-contacts__legend--name">
             <span class="order-form-contacts__mark">Фио</span>
           </legend>
           <div class="order-form-contacts__wrapper">
@@ -187,13 +187,13 @@
               placeholder="Укажите фамилию*">
           </div>
 
-            <div class="order-form-contacts__wrapper">
-              <label class="order-form-contacts__label" for="lastname">
-                <span class="order-form-contacts__data">
-                  Отчество:
-                </span></label>
-              <input class="order-form-contacts__control" type="text" id="lastname" placeholder="Отчество, если желаете">
-            </div>
+          <div class="order-form-contacts__wrapper">
+            <label class="order-form-contacts__label" for="lastname">
+              <span class="order-form-contacts__data">
+                Отчество:
+              </span></label>
+            <input class="order-form-contacts__control" type="text" id="lastname" placeholder="Отчество, если желаете">
+          </div>
 
         </fieldset>
 
@@ -213,15 +213,16 @@
           <input class="order-form-contacts__control" type="e-mail" id="e-mail" placeholder="Ваш E-mail*">
         </fieldset>
 
-        <fieldset class="order-form-contacts">
-          <legend class="order-form-contacts__legend"><span class="order-form__header">Доп</span></legend>
+        <fieldset class="order-form-contacts order-form-contacts--textarea">
+          <legend class="order-form-contacts__legend order-form-contacts__legend--wish"><span
+              class="order-form__header">Доп</span></legend>
           <label class="order-form-contacts__label " for="wishlist"></label>
           <textarea class="order-form-contacts__textarea" name="wishlist" id="wishlist">Опишите все ваши пожелания к заказу
           </textarea>
         </fieldset>
 
-        <small class="order-form__warning">*Поля обязательны для заполнения</small>
-        <button class="button order-form__button-send" type="button">ОТПРАВИТЬ ЗАКАЗ</button>
+        <small class="order-form-contacs__warning">*Поля обязательны для заполнения</small>
+        <button class="order-form__button-send" type="button">ОТПРАВИТЬ ЗАКАЗ</button>
       </div>
 
     </form>

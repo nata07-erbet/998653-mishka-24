@@ -1,4 +1,5 @@
 .order-form-contacts {
+  position: relative;
   border: none;
   margin: 0;
   padding: 0;
@@ -9,7 +10,27 @@
   margin-bottom: 0; /*не обнулился отступ*/
 }
 
-.order-form-contacts__legend {
+.order-form-contacts__legend--name {
+  margin-bottom: 29px;
+}
+
+.order-form-contacts__legend--wish {
+  margin-bottom: 23px;
+}
+
+.order-form-contacts__legend::after {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: @form-color;
+  margin-top: 10px;
+}
+
+.order-form-contacts__legend--email::after {
+  width: 182px;
 }
 
 .order-form-contacts__mark {
@@ -30,38 +51,32 @@
 }
 
 .order-form-contacts__control {
+  .input-reset();
+  width: 260px;
   padding: 17px 0;
   border-bottom: 2px solid @caption-color;
-  box-shadow: inset 0px -2px 0px #000000;
-  .input-reset();
 }
 
 .order-form-contacs__control::placeholder {
   .input-placeholder-reset();
+  color: #ffff5d; // как изменить стиль текста?
 }
 
-.contacts-control {
-  margin-bottom: 22px;
+.order-form-contacts--textarea{
+  margin-bottom: 17px;
 }
 
-.order-form-contacs__title--tel,
-.order-form-contacs__title--email {
-  margin-bottom: 5px;
-}
-
-.order-form-contacs__control-text {
+.order-form-contacts__textarea {
+  .input-reset();
+  .input-placeholder-reset();
+  width: 100%;
+  padding: 17px 17px 89px 17px;
   border: 2px solid @txt-color;
-  width: 260px;
-  min-height: 142px;
-  font-family: inherit;
-  font-size: @offer-size;
-  line-height: 1.06;
-  color: fade(@caption-color, 30%);
-  padding: 17px;
 }
 
 .order-form-contacs__warning {
   display: block;
+  font-weight: 400;
   font-size: @contact-size;
   line-height: 1.14;
   color: @caption-color;
@@ -69,6 +84,7 @@
 }
 
 .order-form__button-send {
+  .button();
   padding: 18px 37px;
   margin-bottom: 55px;
 }
