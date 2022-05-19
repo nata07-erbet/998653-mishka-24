@@ -19,13 +19,7 @@
 }
 
 .order-form-contacts__legend::after {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  content: "";
-  width: 200px;
-  height: 1px;
-  background-color: @form-color;
+  .order-form-line();
   margin-top: 10px;
 }
 
@@ -57,12 +51,12 @@
   border-bottom: 2px solid @caption-color;
 }
 
-.order-form-contacs__control::placeholder {
+.order-form-contacts__control::placeholder {
   .input-placeholder-reset();
-  color: #ffff5d; // как изменить стиль текста?
+  .order-text-placeholder();
 }
 
-.order-form-contacts--textarea{
+.order-form-contacts--textarea {
   margin-bottom: 17px;
 }
 

@@ -4,4 +4,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 120px;
+    margin-top: -30px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 102px;
+    padding-bottom: 96px;
+    margin-top: -50px;
+    margin-bottom: 99px;
+  }
+}
+
+.knitting__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: @mobil-title-size;
+  line-height: @mobil-title-line;
+
+  @media (min-width: @tablet-width) {
+    font-size: @tablet-title-size;
+    line-height: @tablet-title-line;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: @desktop-title-size;
+    line-height: @desktop-title-line;
+  }
 }

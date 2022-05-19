@@ -47,6 +47,12 @@
   font-size: @menu-size;
   line-height: 1.06;
 }
+.order-text-placeholder {
+  font-weight: 400;
+  font-size: @menu-size;
+  line-height: 1.06;
+  color: fade(30%, @caption-color);
+}
 
 .input-reset() {
   background-color: transparent;
@@ -60,4 +66,14 @@
   font-size: @menu-size;
   line-height: 1.06;
   color: fade(@caption-color, 30%);
+}
+//зеленая линия
+.order-form-line() {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: @form-color;
 }
