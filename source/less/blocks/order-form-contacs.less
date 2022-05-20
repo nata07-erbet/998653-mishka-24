@@ -1,17 +1,38 @@
 .order-form-contacts {
-  position: relative;
-  border: none;
-  margin: 0;
-  padding: 0;
+  .input-reset();
   margin-bottom: 35px;
+  position: relative;
+}
+
+.order-form-contacts__block {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 167px 501px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 175px 1fr;
+  }
+}
+
+.order-form-contacts--bgc {
+
 }
 
 .order-form-contacs:last-child {
   margin-bottom: 0; /*не обнулился отступ*/
 }
 
+.order-form-contacts__legend {
+  justify-self: center;
+}
+
 .order-form-contacts__legend--name {
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .order-form-contacts__legend--wish {
@@ -19,8 +40,14 @@
 }
 
 .order-form-contacts__legend::after {
-  .order-form-line();
-  margin-top: 10px;
+  @media (max-width: @mobile-width-only) {
+    .order-form-line();
+    margin-top: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .order-form-contacts__legend--email::after {
@@ -34,6 +61,12 @@
 .order-form-contacts__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px; //потом подогнать
+  }
 }
 
 .order-form-contacts__wrapper:not(:last-child) {
@@ -45,27 +78,65 @@
 }
 
 .order-form-contacts__control {
+  position: relative;
   .input-reset();
   width: 260px;
   padding: 17px 0;
   border-bottom: 2px solid @caption-color;
+
+  @media (min-width: @tablet-width) {
+    width: 375px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 573px;
+  }
+
 }
 
-.order-form-contacts__control::placeholder {
-  .input-placeholder-reset();
-  .order-text-placeholder();
+.order-form-contacts__control--name {
+  @media (min-width: @tablet-width) {
+    width: 423px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 626px;
+  }
 }
 
-.order-form-contacts--textarea {
-  margin-bottom: 17px;
+.order-form-contacts__control--tel {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 501px;
+  }
+}
+
+.order-form-contacts__icon-tel {
+  position: absolute;
+  top: 30px;
+  right: 6px;
+}
+
+.order-form-contacts__icon-mail {
+  position: absolute;
+  top: 30px;
+  right: 6px;
+}
+
+.order-form-contacts__control--mail {
+  @media (min-width: @tablet-width) {
+    width: 501px;
+  }
 }
 
 .order-form-contacts__textarea {
   .input-reset();
-  .input-placeholder-reset();
   width: 100%;
+  margin-bottom: 17px;
   padding: 17px 17px 89px 17px;
   border: 2px solid @txt-color;
+  resize: none;
 }
 
 .order-form-contacs__warning {

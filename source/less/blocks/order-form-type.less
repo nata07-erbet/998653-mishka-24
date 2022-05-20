@@ -1,13 +1,31 @@
 .order-form-type {
-  position: relative;;
   border: none;
   margin: 0;
   padding: 0;
   margin-bottom: 31px;
 }
 
-.order-form-type__title {
-  margin-bottom: 30px;
+.order-form-type__wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 166px 1fr;
+  }
+}
+
+.order-form-type__legend {
+  .order-text-title();
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+    padding-top: 23px;
+  }
 }
 
 .order-form-type__title-mark::after {
@@ -32,9 +50,11 @@
   margin-right: 19px;
 }
 
-.order-form-type__control:checked + .order-form-type__label::after {
+.order-form-type__label::after {
   content: " ";
   position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
   width: 18px;
   height: 18px;

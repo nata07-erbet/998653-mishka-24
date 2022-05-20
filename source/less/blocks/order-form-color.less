@@ -1,13 +1,56 @@
 .order-form-color {
-  position: relative;
   border: none;
   margin: 0;
   padding: 0;
   margin-bottom: 33px;
 }
 
-.order-form-color__title {
+.order-form-color__wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 166px 1fr;
+    padding: 50px;
+    padding-top: 51px;
+    padding-bottom: 49px;
+    background-color: @footer-color;
+    margin: 0 -50px;
+}
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 175px 1fr;
+    padding-top: 48px;
+    padding-bottom: 52px;
+    background-color: @footer-color;
+  }
+}
+
+.order-form-color__legend {
+  .order-text-title();
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+    margin-top: 67px;
+  }
+}
+
+.order-form-color__wrapper-content {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .order-form-color__title-mark {
@@ -17,6 +60,10 @@
   line-height: 0.94;
   text-transform: uppercase;
   color: @btn-left-color;
+}
+
+.order-form-color__mark {
+  .order-text();
 }
 
 .order-form-color__label {

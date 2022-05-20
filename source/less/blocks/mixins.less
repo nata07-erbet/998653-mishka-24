@@ -47,16 +47,12 @@
   font-size: @menu-size;
   line-height: 1.06;
 }
-.order-text-placeholder {
-  font-weight: 400;
-  font-size: @menu-size;
-  line-height: 1.06;
-  color: fade(30%, @caption-color);
-}
 
 .input-reset() {
   background-color: transparent;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .input-placeholder-reset() {
@@ -65,8 +61,10 @@
   font-weight: 400;
   font-size: @menu-size;
   line-height: 1.06;
-  color: fade(@caption-color, 30%);
+  //color: fade(30%  @caption-color);
+  color: rgba(0, 0, 0, 0.3);
 }
+
 //зеленая линия
 .order-form-line() {
   display: inline-block;
