@@ -2,7 +2,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 31px;
+  margin-bottom: 19px;
 }
 
 .order-form-type__wrapper {
@@ -16,7 +16,8 @@
 
 .order-form-type__legend {
   .order-text-title();
-  margin-bottom: 25px;
+  margin-bottom: 31px;
+  margin-left: -1px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -28,6 +29,7 @@
   }
 }
 
+
 .order-form-type__title-mark::after {
   .order-form-line();
 }
@@ -36,14 +38,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .order-form-type__label::before {
   content: " ";
   display: block;
   width: 42px;
-  height: 42px;
+  height: 40px;
   border-radius: 50%;
   color: transparent;
   border: 2px solid @txt-color;
@@ -64,4 +66,6 @@
 
 .order-form-type__mark {
   .order-text();
+  margin-left: 0px;
+  margin-top: 1px;
 }

@@ -1,14 +1,7 @@
-
-.social__wrapper {
-  width: 260px;
-  padding-top: 29px;
-  padding-bottom: 27px;
-  border-bottom: 2px solid @line-color;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-    padding: 0;
-  }
+.social {
+  width: 142px;
+  margin: 0 auto;
+  margin-bottom: 59px;
 }
 
 .social__title {
@@ -25,15 +18,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 142px;
+  margin: 0 auto;
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__item {
   &:not(:last-child) {
-    margin-right: 41px;
+    margin-right: 29px;
   }
 }
 
 .social__item a {
   display: block;
+  text-align: center;
 }

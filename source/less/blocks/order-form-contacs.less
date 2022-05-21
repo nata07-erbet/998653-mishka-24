@@ -1,6 +1,6 @@
 .order-form-contacts {
   .input-reset();
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   position: relative;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .order-form-contacts__legend--name {
-  margin-bottom: 29px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -42,13 +42,13 @@
 }
 
 .order-form-contacts__legend--wish {
-  margin-bottom: 23px;
+  margin-bottom: 19px;
 }
 
 .order-form-contacts__legend::after {
   @media (max-width: @mobile-width-only) {
     .order-form-line();
-    margin-top: 10px;
+    top: 8px;
   }
 
   @media (min-width: @tablet-width) {
@@ -76,7 +76,7 @@
 }
 
 .order-form-contacts__wrapper:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .order-form-contacts__data {
@@ -87,7 +87,7 @@
   position: relative;
   .input-reset();
   width: 260px;
-  padding: 17px 0;
+  padding: 16px 0;
   border-bottom: 2px solid @caption-color;
 
   @media (min-width: @tablet-width) {
@@ -102,6 +102,8 @@
 .order-form-contacts__control--name {
   @media (min-width: @tablet-width) {
     width: 423px;
+    padding-top: 16.85px;
+    padding-bottom: 17.15px;
   }
 
   @media (min-width: @desktop-width) {
@@ -109,8 +111,20 @@
   }
 }
 
+.order-form-contacts__control--surname {
+  padding-top: 16px;
+  padding-bottom: 15 px;
+}
+
+.order-form-contacts__control--lastname {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
 .order-form-contacts__control--tel {
   position: relative;
+  padding-top: 17px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -122,6 +136,8 @@
 
 .order-form-contacts__control--mail {
   position: relative;
+  padding-top: 21px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -134,7 +150,7 @@
 .order-form-contacts__icon-tel {
   position: absolute;
   top: 30px;
-  right: 26px;
+  right: 6px;
 
   @media (min-width: @tablet-width) {
     top: 11px;
@@ -148,8 +164,8 @@
 
 .order-form-contacts__icon-mail {
   position: absolute;
-  top: 30px;
-  right: 22px;
+  top: 37px;
+  right: 2px;
 
   @media (min-width: @tablet-width) {
     top: 16px;
@@ -162,7 +178,7 @@
 }
 
 .order-form-contacts--textarea {
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 53px;
@@ -210,8 +226,13 @@
 
 .order-form__button-send {
   .button();
-  padding: 18px 37px;
+  padding-left: 37px;
+  padding-right: 34px;
+  padding-top: 23px;
+  padding-bottom: 18px;
   margin-bottom: 55px;
+  font-size: @menu-size;
+  line-height: 0.94;
 
   @media (min-width: @tablet-width) {
     order: -1;
