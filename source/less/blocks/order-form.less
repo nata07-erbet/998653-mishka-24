@@ -31,11 +31,21 @@
 }
 
 .order-form__wrapper-bcg {
-  padding: 50px;
-  background-color: @footer-color;
-  margin: 0 -50px;
-
   @media (max-width: @mobile-width-only) {
-    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 50px;
+    background-color: @footer-color;
+    margin: 0 -50px;
+    margin-bottom: 50px;
+    }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 }
