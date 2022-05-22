@@ -1,21 +1,17 @@
+.order-form__green-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .order-form__header {
   .order-text-title();
 }
 
-.order-form__header--type::after {
+.order-form__green-line::after {
   .order-form-line();
-  right: -1;
-  top: 7px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.order-form__header--color::after {
-  .order-form-line();
-  right: 0;
-  top: 7px;
+  margin-left: auto;
 
   @media (min-width: @tablet-width) {
     display: none;

@@ -2,7 +2,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 19px;
+  margin-bottom: 22px;
 }
 
 .order-form-type__wrapper {
@@ -17,7 +17,6 @@
 .order-form-type__legend {
   .order-text-title();
   margin-bottom: 31px;
-  margin-left: -1px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -29,25 +28,22 @@
   }
 }
 
-
-.order-form-type__title-mark::after {
-  .order-form-line();
-}
-
 .order-form-type__label {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
 }
 
 .order-form-type__label::before {
   content: " ";
   display: block;
   width: 42px;
-  height: 40px;
+  height: 42px;
+  flex: 0 0 42px;
   border-radius: 50%;
-  color: transparent;
+  background-color: transparent;
   border: 2px solid @txt-color;
   margin-right: 19px;
 }
@@ -55,13 +51,14 @@
 .order-form-type__label::after {
   content: " ";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
   display: inline-block;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  color: @form-color;
+  background-color: @form-color;
 }
 
 .order-form-type__mark {

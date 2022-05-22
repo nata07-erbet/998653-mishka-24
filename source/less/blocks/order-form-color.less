@@ -16,7 +16,7 @@
     padding-bottom: 49px;
     background-color: @footer-color;
     margin: 0 -50px;
-}
+  }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 175px 1fr;
@@ -67,6 +67,7 @@
 }
 
 .order-form-color__label {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -86,6 +87,19 @@
   color: transparent;
   border: 2px solid @txt-color;
   margin-right: 23px;
+}
+
+.order-form-color__control:checked + .order-form-color__label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 23px;
+  height: 12px;
+  border: 2px solid @caption-color;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
 }
 
 .order-form-color__label-mark {

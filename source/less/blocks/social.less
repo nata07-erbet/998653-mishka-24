@@ -1,7 +1,7 @@
 .social {
   width: 142px;
   margin: 0 auto;
-  margin-bottom: 59px;
+  margin-bottom: 53px;
 }
 
 .social__title {
@@ -16,7 +16,7 @@
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 142px;
   margin: 0 auto;
@@ -28,12 +28,13 @@
 }
 
 .social__item {
-  &:not(:last-child) {
-    margin-right: 29px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+
 }
 
 .social__item a {
-  display: block;
   text-align: center;
 }
