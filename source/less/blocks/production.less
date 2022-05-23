@@ -43,6 +43,7 @@
 
 .production__title {
   margin: 0;
+  margin-left: 6px;
   font-size: @menu-size;
   line-height: @menu-line;
 
@@ -62,6 +63,10 @@
     font-size: @txt-size;
     line-height: 30px;
   }
+}
+
+.production__video-icon {
+  margin-right: 2px;
 }
 
 .production__video__wrapper {
@@ -98,7 +103,6 @@
 }
 
 .production__video-button-play {
-  //как оценровать кнопку?
   position: absolute;
   top: 50%;
   left: 50%;
@@ -120,10 +124,13 @@
 }
 
 .production__text {
+  min-width: 226px;
   margin: 0;
-  font-size: @descript-size;
   line-height: 24px;
+  margin-top: 32px;
   margin-bottom: 41px;
+  font-size: @descript-size;
+  text-align: left;
 }
 
 .production__button-order {

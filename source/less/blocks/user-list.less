@@ -20,19 +20,14 @@
   }
 }
 
+.user-list__item-link:hover .user-list__icon {
+  fill: @btn-left-color;
+}
+
 .user-list__icon {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  :hover {
-    fill: @btn-left-color;
-  }
-
-  &:active {
-    /* stylelint-disable-next-line declaration-block-trailing-semicolon */
-    fill: fade(@btn-left-color, 30%)
-  }
 }
 
 .user-list__item-search {

@@ -107,6 +107,15 @@
   font-size: @contact-size;
   line-height: @contact-line;
   color: @txt-color;
+
+  &:hover {
+    color: @link-color;
+  }
+
+  &:active {
+    color: @link-color;
+    border-color: fade(@link-color, 30%);
+  }
 }
 
 .contacts__caption {

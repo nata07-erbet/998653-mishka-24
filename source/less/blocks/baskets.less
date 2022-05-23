@@ -185,4 +185,14 @@
   margin: 0 auto;
   margin-bottom: 36px;
   .button();
+
+  &:hover {
+    background-color: @txt-color;
+    color: @bg-color;
+  }
+
+  &:active {
+    background-color: @txt-color;
+    color: fade(@bg-color, 30%);
+  }
 }
