@@ -1,6 +1,9 @@
+.reviews::after {
+  .zig-zag();
+}
+
 .reviews__wrapper {
   position: relative;
-  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/review_tablet.jpg");
@@ -13,7 +16,7 @@
       "slider slider"
       "slider slider";
     padding-top: 83px;
-    padding-bottom: 47px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: @desktop-width) {
@@ -58,6 +61,7 @@
 }
 
 .reviews__text {
+  width: 260px;
   font-size: @txt-size;
   line-height: 2;
   margin: 0;
@@ -72,19 +76,24 @@
   }
 }
 
+.reviews__text-wrap {
+  white-space: nowrap;
+}
+
 .reviews__author-name {
+  display: block;
+  margin-bottom: 3px;
+  font-style: normal;
   font-size: @menu-size;
   line-height: @menu-line;
   font-weight: bold;
-
-  margin-bottom: 24px;
 }
 
 .reviews__author-email-link {
   font-size: 17px;
   line-height: 30px;
   color: @txt-color;
-  font-style: none;
+  font-style: normal;
   text-decoration: none;
   margin-bottom: 30px;
 }
@@ -116,4 +125,10 @@
     font-size: @offer-size;
     justify-self: end;
   }
+}
+
+.slider__toogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

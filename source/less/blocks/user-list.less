@@ -1,4 +1,5 @@
 .user-list {
+  grid-area: user;
   display: flex;
   flex-direction: column;
 
@@ -11,12 +12,7 @@
   }
 }
 
-
 .user-list__item-link {
-  display: flex;
-  justify-content: center;
-  .main-nav__link();
-
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
     padding: 0;
@@ -28,6 +24,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  :hover {
+    fill: @btn-left-color;
+  }
+
+  &:active {
+    /* stylelint-disable-next-line declaration-block-trailing-semicolon */
+    fill: fade(@btn-left-color, 30%)
+  }
 }
 
 .user-list__item-search {
@@ -37,8 +42,16 @@
 }
 
 .user-list__icon--search {
+  margin-right: 28px;
+  margin-left: 1px;
+
   @media (min-width: @tablet-width) {
     border-left: 1px solid @search-border;
     border-right: 1px solid @search-border;
   }
+}
+
+.user-list__icon--basket {
+  margin-right: 26px;
+  margin-left: 1px;
 }

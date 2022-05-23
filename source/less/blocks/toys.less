@@ -3,12 +3,19 @@
 }
 
 .toys__image {
+  position: relative;
   display: block;
   min-height: 373px;
-  background-image: url("../img/hero-mobile.jpg");
+  //background-color: @bcg-color;
+  //background-image: url("../img/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-position-x: 24px;
   padding-top: 73px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x 1.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-desktop.jpg");
@@ -59,5 +66,3 @@
 .toys__header-wrap {
   white-space: nowrap;
 }
-
-
