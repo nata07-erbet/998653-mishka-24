@@ -3,27 +3,33 @@
 }
 
 .toys__image {
-  position: relative;
   display: block;
-  min-height: 373px;
-  //background-color: @bcg-color;
-  //background-image: url("../img/hero-mobile.jpg");
+  background-color: @bcg-color;
+  background-image: url("../img/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: 24px;
   padding-top: 73px;
+
+  @media (max-width: @mobile-width-only) {
+    min-height: 373px;
+  }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x 1.jpg");
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/hero-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative;
+    background-image: url("../img/hero-desktop 2.jpg");
     background-size: 1150px 746px;
-    padding-top: 155px;
-    margin-top: -63px;
+    background-position: center;
+    border-top: 1px solid #e1e1e1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    position: relative;
+    background-image: url("../img/"); //откуда брати ретину?
   }
 
   @media (min-width: @desktop-width) {
@@ -48,18 +54,6 @@
     width: 668px;
     font-size: @tablet-title-size;
     line-height: @tablet-title-line;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .toys__image {
-    display: inline-block;
-    background-image: url("../img/hero-desktop.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    min-width: 1150px;
-    width: 100%;
-    min-height: 746px;
   }
 }
 

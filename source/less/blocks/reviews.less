@@ -15,15 +15,20 @@
       "tit btn"
       "slider slider"
       "slider slider";
-    padding-top: 83px;
+    padding-top: 79px;
     padding-bottom: 29px;
+    margin-left: -50px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/review-tablet@2x.jpg");
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/review_tablet.jpg");
     background-position: left;
     background-repeat: no-repeat;
-    padding-top: 78px;
+    padding-top: 93px;
     padding-bottom: 96px;
     margin-bottom: 71px;
   }
@@ -38,7 +43,7 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    align-self: center;
+    justify-self: flex-start;
     margin-bottom: 40px;
     font-size: @tablet-title-size;
     line-height: 1.16;
@@ -54,6 +59,10 @@
 .reviews-list {
   grid-area: slider;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -5px;
+  }
 }
 
 .reviews__item {
@@ -68,7 +77,10 @@
   margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
+    width: 668px;
     margin-bottom: 61px;
+    font-size: @menu-size;
+    line-height: 1.76;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,6 +90,10 @@
 
 .reviews__text-wrap {
   white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    white-space: wrap;
+  }
 }
 
 .reviews__author-name {

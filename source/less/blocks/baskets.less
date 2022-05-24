@@ -1,7 +1,12 @@
 .baskets::after {
   .zig-zag();
-}
 
+  @media (min-width: @tablet-width) {
+    width: 772px;
+    margin: 0 auto;
+    margin-top: 53px;
+  }
+}
 
 .baskets__wrapper {
   position: relative;
@@ -12,7 +17,6 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    column-gap: 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "title title"
@@ -47,6 +51,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-top: ;
     margin-bottom: 43px;
     font-weight: 700;
     font-size: @tablet-title-size;
@@ -76,6 +81,8 @@
     right: 0;
     width: 100px;
     margin: 0;
+    margin-top: 2px;
+    margin-right: 13px;
     text-align: center;
   }
 
@@ -119,7 +126,7 @@
   margin-bottom: 48px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -171,8 +178,20 @@
   margin-bottom: 25px;
   align-self: center;
 
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 46px;
+    font-size: @tablet-price;
+    line-height: 1.2px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 30px;
+    font-size: @tablet-price;
+    line-height: 1.2px;
   }
 }
 
@@ -194,5 +213,13 @@
   &:active {
     background-color: @txt-color;
     color: fade(@bg-color, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 292px;
+    height: 52px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    margin-right: 44px;
   }
 }

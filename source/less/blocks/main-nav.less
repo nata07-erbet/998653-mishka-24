@@ -21,6 +21,7 @@
     grid-template-areas:
       "logo user"
       "site text";
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,10 +35,12 @@
 }
 
 .main-nav-header__logo {
-  height: 35px;
+  background-color: aqua;
   grid-area: logo;
-  margin-bottom: 20px;
-  text-align: center;
+  min-width: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     opacity: 0.6;
@@ -53,9 +56,6 @@
     justify-self: flex-start;
     align-self: flex-start;
     margin-top: 22px;
-    background-image: url("../img/mishka-logo-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,6 +68,8 @@
 .main-nav-header__logo-img {
   width: 86px;
   height: 35px;
+  margin: 0 auto;
+  padding: 22px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -81,6 +83,10 @@
   right: -1px;
   width: 20px;
   height: 21px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav--closed .main-nav__toogle::before {
@@ -132,8 +138,15 @@
 }
 
 .main-nav__item {
-  min-height: 79px;
   border-bottom: 1px solid @border-color;
+
+  @media (max-width: @mobile-width-only) {
+    min-height: 79px;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .main-nav__link {
@@ -146,6 +159,11 @@
   &:active {
     color: fade(@caption-color, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 1px;
+    padding: 0;
+  }
 }
 
 .main-nav__order-text {
@@ -156,8 +174,10 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-area: text;
-    justify-content: end;
-    align-self: center;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: 20px;
+    margin-bottom: 4px;
   }
 }
 
