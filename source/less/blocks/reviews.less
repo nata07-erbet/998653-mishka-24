@@ -1,5 +1,10 @@
 .reviews::after {
   .zig-zag();
+  margin-top: 55px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 772px;
+  background-position: 50% 0;
 }
 
 .reviews__wrapper {
@@ -41,10 +46,13 @@
   line-height: @subtitle-line;
   margin: 0;
   margin-bottom: 14px;
+  margin-left: 20px;
 
   @media (min-width: @tablet-width) {
     justify-self: flex-start;
-    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-bottom: 43px;
+    margin-left: 50px;
     font-size: @tablet-title-size;
     line-height: 1.16;
   }
@@ -62,6 +70,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -5px;
+    margin-left: 50px;
   }
 }
 
@@ -120,9 +129,11 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    width: 174px;
+    height: 26px;
     transform: translateY(-25px);
     right: 0;
-    bottom: 0;
+    bottom: 23px;
   }
 
   @media (min-width: @desktop-width) {
@@ -141,18 +152,4 @@
     font-size: @offer-size;
     justify-self: end;
   }
-}
-
-.slider__toogle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider__toogle:hover .slider__toogle-icon {
-  fill: fade(@caption-color, 60%);
-}
-
-.slider__toogle:active .slider__toogle-icon {
-  fill: fade(@caption-color, 30%);
 }

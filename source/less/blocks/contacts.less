@@ -24,6 +24,7 @@
 
   @media (min-width: @tablet-width) {
     min-width: 600px;
+    margin-top: 70px;
     margin-bottom: 49px;
     flex-grow: 1;
     font-size: @tablet-title-size;
@@ -45,7 +46,8 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 0;
+    right: 3px;
+    top: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,14 +84,12 @@
   align-items: flex-start;
   margin: 0;
   margin-bottom: 30px;
-  font-size: @contact-size;
-  line-height: @contact-line;
-  font-style: normal;
 
   @media (min-width: @tablet-width) {
     display: flex;
     column-gap: 20px;
     justify-content: center;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,6 +99,14 @@
 
 .contacts__data-address {
   margin: 0;
+  font-size: @contact-size;
+  line-height: @contact-line;
+  font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__data-link {
@@ -116,6 +124,11 @@
     color: @link-color;
     border-color: fade(@link-color, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__caption {
@@ -123,11 +136,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 335px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    width: 335px;
     display: flex;
-    column-gap: 20px;
   }
 }
 
@@ -136,6 +150,11 @@
   font-weight: 400;
   font-size: @contact-size;
   line-height: @contact-line;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__caption-point {
@@ -145,6 +164,13 @@
   font-weight: 400;
   font-size: @contact-size;
   line-height: @contact-line;
+
+  @media (min-width: @tablet-width) {
+    width: 257px;
+    margin-left: 26px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__caption__wrapper {
@@ -187,9 +213,13 @@
   margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 55px;
+    width: 230px;
+    height: 52px;
+    margin-top: 58px;
     margin-bottom: 57px;
+    padding: 16px 27px;
   }
+
   @media (min-width: @desktop-width) {
     width: 230px;
     height: 55px;
