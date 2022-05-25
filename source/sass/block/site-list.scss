@@ -1,0 +1,191 @@
+.site-list {
+  list-style: none;
+
+  @include zero;
+
+  @media (min-width: $min-tablet) {
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+  }
+}
+
+.site-list--lead {
+  @media (min-width: $min-tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $min-desktop) {
+    font-size: 17px;
+  }
+}
+
+.site-list__item-link:hover,
+.site-list__item-link:focus {
+  color: rgba($basic-black, 0.6);
+
+  & .site-list__icon {
+    fill-opacity: 1;
+    fill: $basic-mint;
+  }
+}
+
+.site-list__item-link:active {
+  color: rgba($basic-black, 0.3);
+
+  & .site-list__icon {
+    fill-opacity: 0.3;
+  }
+}
+
+.site-list--other {
+  @media (min-width: $min-tablet) {
+    justify-content: flex-end;
+    order: -1;
+    margin-left: 50%;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-left: 0;
+    order: 0;
+    flex-direction: row;
+  }
+}
+
+.site-list__item {
+  position: relative;
+  padding-top: 29px;
+  padding-bottom: 26px;
+  padding-left: 46px;
+  padding-right: 5px;
+  z-index: 10;
+
+  @media (min-width: $min-tablet) {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-basis: 42%;
+  }
+}
+
+.site-list__item--search::before {
+  @media (min-width: $min-tablet) {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 89px;
+    top: 0;
+    right: 83px;
+    background-color: $grey;
+    box-shadow: -83px 0 0 $grey;
+  }
+
+  @media (min-width: $min-desktop) {
+    top: -8px;
+    right: 46px;
+    height: 89px;
+    box-shadow:
+      -83px 0 0 $grey,
+      -599px 0 0 $grey;
+  }
+}
+
+.site-list__item::before {
+  @media (max-width: $min-tablet - 1px) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 123.08%;
+    top: 0;
+    left: -11.54%;
+    background-color: $grey;
+  }
+}
+
+.site-list__item--order {
+  @media (min-width: $min-tablet) {
+    padding-top: 33px;
+    padding-right: 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 3px;
+  }
+}
+
+.site-list__item-link {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-list__item--lead:not(:nth-child(2n)) {
+  @media (min-width: $min-tablet) {
+    padding-right: 38px;
+  }
+}
+
+.site-list__item--hide {
+  display: none;
+
+  @media (min-width: $min-desktop) {
+    display: block;
+    position: absolute;
+    top: 83px;
+    font-size: 15px;
+    width: 77%;
+  }
+}
+
+.site-list__search {
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
+}
+
+.site-list__icon {
+  position: absolute;
+  left: -45px;
+  top: 3px;
+  fill: $basic-black;
+  fill-opacity: 0.2;
+
+  @media (min-width: $min-tablet) {
+    left: -51px;
+  }
+
+  @media (min-width: $min-desktop) {
+    left: -16px;
+  }
+}
+
+.site-list__icon:hover,
+.site-list__icon:focus {
+  fill-opacity: 1;
+  fill: $basic-mint;
+}
+
+.site-list__icon:active {
+  fill-opacity: 0.3;
+}
+
+.site-list__icon--search {
+  @media (min-width: $min-tablet) {
+    top: 11px;
+    left: -128px;
+  }
+
+  @media (min-width: $min-desktop) {
+    top: 3px;
+    left: 123px;
+  }
+}

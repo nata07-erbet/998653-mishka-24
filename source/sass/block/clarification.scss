@@ -1,0 +1,19 @@
+.clarification {
+  z-index: 10;
+
+  @include zero;
+  flex-basis: 50%;
+  padding-top: 25px;
+
+  @include basic-font;
+  text-align: right;
+  color: $darkest-grey;
+
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-left: 50%;
+  }
+}

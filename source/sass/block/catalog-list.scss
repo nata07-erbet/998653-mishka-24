@@ -1,0 +1,44 @@
+.catalog-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include zero;
+  margin: 0 auto;
+  list-style: none;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $min-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1150px;
+    padding-top: 90px;
+  }
+}
+
+.catalog-list__item {
+  @media (max-width: $min-tablet - 1px) {
+    max-width: $min-phone;
+    margin: auto;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: 100%;
+    max-width: $min-tablet;
+  }
+
+  @media (min-width: $min-desktop) {
+    flex-basis: 316px;
+    padding: 0;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 50px;
+    }
+  }
+}

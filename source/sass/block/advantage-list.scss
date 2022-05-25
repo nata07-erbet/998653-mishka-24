@@ -1,0 +1,30 @@
+.advantage-list {
+  @include zero;
+  @include weight-font(20px, 17px);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $min-tablet) {
+    flex-wrap: wrap;
+    padding-top: 98px;
+
+    @include weight-font(22px, 20px);
+    margin-bottom: -110px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 96px;
+  }
+}
+
+.advantage-list__item {
+  position: relative;
+  padding-top: 83px;
+
+  @media (min-width: $min-tablet) {
+    flex-basis: 50%;
+    padding-top: 0;
+    padding-bottom: 110px;
+  }
+}

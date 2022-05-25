@@ -1,0 +1,34 @@
+.header-nav {
+  position: relative;
+
+  @include weight-font;
+
+  @media (min-width: $min-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @media (min-width: $min-desktop) {
+    @include weight-font (24px, 17px);
+  }
+}
+
+.header-nav__toggle {
+  position: absolute;
+  top: -53px;
+  right: -4px;
+
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
+}
+
+.header-nav--closed .header-nav__list {
+  @media (max-width: $min-tablet) {
+    display: none;
+  }
+}

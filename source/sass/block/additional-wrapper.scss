@@ -1,0 +1,18 @@
+.additional-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 30px;
+  padding-right: 26px;
+  margin: 0 auto;
+
+  @media (min-width: $min-tablet) {
+    width: 100%;
+    margin: 0;
+    padding-right: 33px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 100%;
+  }
+}

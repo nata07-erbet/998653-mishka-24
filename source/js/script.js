@@ -1,14 +1,21 @@
-let navMain = document.querySelector(".main-nav");
-let navToggle = document.querySelector(".main-nav__toggle");
+(function () {
+  var order = document.querySelectorAll(".js-order");
+  var modalOrder = document.querySelector(".js-modal");
 
-navMain.classList.remove("main-nav--nojs");
+  order.forEach(function(open) {
+    open.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalOrder.classList.remove("none");
+    })
+  });
 
-navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-  }
-});
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (!modalOrder.classList.contains("none")) {
+        evt.preventDefault();
+        modalOrder.classList.add("none");
+      }
+    }
+  });
+
+})();

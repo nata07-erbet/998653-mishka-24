@@ -1,0 +1,138 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 55px;
+
+  @media (min-width: $min-tablet) {
+    padding-bottom: 31px;
+  }
+}
+
+.form__type {
+  @include zero;
+  padding-bottom: 19px;
+
+  @media (min-width: $min-tablet) {
+    padding-bottom: 8px;
+  }
+}
+
+.form__color {
+  @include zero;
+  padding-top: 0;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 66px;
+    padding-bottom: 10px;
+  }
+}
+
+.form__name {
+  @include zero;
+  padding-top: 0;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 63px;
+    padding-bottom: 13px;
+  }
+}
+
+.form__contact {
+  padding-top: 12px;
+
+  @media (min-width: $min-tablet) {
+    padding-top: 55px;
+    padding-bottom: 15px;
+  }
+}
+
+.form__phone {
+  padding-top: 11px;
+
+  @media (min-width: $min-desktop) {
+    padding-left: 60px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 13px;
+  right: 5px;
+  fill-opacity: 0.2;
+
+  @media (min-width: $min-tablet) {
+    top: 5px;
+    right: 26px;
+
+    &--email {
+      top: 0;
+      right: 22px;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    right: 8px;
+
+    &--email {
+      right: 4px;
+    }
+  }
+}
+
+.form__email {
+  @media (min-width: $min-tablet) {
+    padding-top: 8px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-left: 60px;
+  }
+}
+
+.form__add {
+  @media (min-width: $min-tablet) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-left: 60px;
+  }
+}
+
+.form__explanation {
+  @include zero;
+  padding-bottom: 30px;
+
+  @include basic-font(16px, 14px);
+
+  color: $darkest-grey;
+  box-shadow: none;
+
+  @media (min-width: $min-tablet) {
+    @include basic-font(30px, 17px);
+    padding-top: 11px;
+    padding-right: 30px;
+  }
+}
+
+.form__reverse {
+  @media (min-width: $min-tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 36px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 732px;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+}
+
+.input-text:hover + .form__icon,
+.input-text:focus + .form__icon {
+  fill: $border-mint;
+  fill-opacity: 1;
+}

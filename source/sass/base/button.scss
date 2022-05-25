@@ -1,0 +1,108 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+
+  @include zero;
+  width: 100%;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include weight-font(20px, 17px);
+  text-align: center;
+  color: $darkest-grey;
+  background-color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $darkest-grey;
+}
+
+.button:hover,
+.button:focus {
+  background: linear-gradient(0deg, $darkest-grey, $darkest-grey);
+  color: $basic-white;
+}
+
+.button:active {
+  color: rgba($basic-white, 0.6);
+}
+
+.button--padding {
+  padding: 14px 5px;
+}
+
+.button--accent {
+  color: $basic-white;
+  background-color: $basic-mint;
+  border: none;
+}
+
+.button--accent:hover,
+.button--accent:focus {
+  background: none;
+  background-color: $hover-dark-mint;
+}
+
+.button--accent:active {
+  opacity: 0.3;
+}
+
+.button--nav {
+  @include size(21px, 20px);
+  fill: $button-menu;
+  border: none;
+
+  @media (min-width: $min-tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &:active {
+    background: none;
+    background-color: transparent;
+  }
+}
+
+.button--prev-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 130px;
+  height: 52px;
+  border: none;
+}
+
+.button--prev-next:hover,
+.button--prev-next:focus {
+  background: none;
+}
+
+.button--prev-next:hover .button__arrow,
+.button--prev-next:focus .button__arrow {
+  fill-opacity: 0.6;
+}
+
+.button--prev-next:active .button__arrow {
+  fill-opacity: 0.3;
+}
+
+.button--write {
+  font-size: 18px;
+}
+
+.button--write-us {
+  font-size: 18px;
+
+  @media (min-width: $min-tablet) {
+    font-size: 17px;
+  }
+}
+
+.button--form {
+  @media (min-width: $min-tablet) {
+    margin-left: 0;
+    align-self: flex-start;
+    max-width: 230px;
+  }
+}

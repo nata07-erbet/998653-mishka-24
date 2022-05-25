@@ -1,0 +1,28 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include zero;
+  width: 143px;
+  margin: 0 auto;
+  list-style: none;
+
+  @media (min-width: $min-tablet) {
+    padding: 0;
+    padding-right: 3px;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 180px;
+  }
+}
+
+.social-list__item {
+  @include size(25px, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
