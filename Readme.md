@@ -1,7 +1,7 @@
-# Личный проект «Мишка» 
+# Личный проект «Мишка»
 
-* Студент: [Natalya Erbet](https://up.htmlacademy.ru/adaptive/24/user/998653).
-* Наставник: `Максим Петрищак` (https://github.com/PetrischakMaxim). 
+- Студент: [Natalya Erbet](https://up.htmlacademy.ru/adaptive/24/user/998653).
+- Наставник: `Алексей Зольников`
 
 ---
 
