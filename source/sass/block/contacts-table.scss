@@ -35,11 +35,15 @@
   @include zero;
   padding-bottom: 30px;
 
+
+
   @media (min-width: $min-tablet) {
     padding-bottom: 46px;
+    padding-left: 1px;
   }
 
   @media (min-width: $min-desktop) {
     padding-bottom: 10px;
+    padding-left: 2px;
   }
 }

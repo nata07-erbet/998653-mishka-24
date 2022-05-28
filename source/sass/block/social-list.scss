@@ -17,12 +17,13 @@
 }
 
 .social-list__item {
+  margin-top: 2px;
   @include size(25px, 40px);
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: -4px;
   }
 }

@@ -9,7 +9,7 @@
   fill: $basic-mint;
 
   @media (min-width: $min-tablet) {
-    top: 31px;
+    top: 34px;
     left: 41px;
   }
 
@@ -31,7 +31,7 @@
   @include weight-font;
 
   @media (min-width: $min-tablet) {
-    padding-top: 39px;
+    padding-top: 42px;
     padding-left: 107px;
     padding-bottom: 24px;
     padding-right: 10px;
@@ -56,9 +56,9 @@
 
 .video-process__description {
   @include zero;
-  padding-top: 32px;
+  padding-top: 34px;
   padding-bottom: 41px;
-  padding-left: 35px;
+  padding-left: 33px;
   padding-right: 10px;
 
   @include basic-font;

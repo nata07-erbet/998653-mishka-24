@@ -3,6 +3,7 @@
 }
 
 .contacts__container {
+  position: relative;
   @media (min-width: $min-desktop) {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +12,27 @@
     padding-right: 50px;
     padding-bottom: 47px;
     margin: 0 auto;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/map-pin.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 100px;
+    bottom: 200px;
+    right: 200px;
+    
+    @media (min-width: $min-tablet) {
+      bottom: 326px;
+      left: 364px;
+    }
+
+    @media (min-width: $min-desktop) {
+      bottom: 200px;
+      right: 200px;
+    }
   }
 }
 
@@ -141,7 +163,7 @@
   border-bottom: solid 1px $border-mint;
 
   @media (min-width: $min-tablet) {
-    padding-bottom: 5px;
+    padding-bottom: 4px;
   }
 
   @media (min-width: $min-desktop) {

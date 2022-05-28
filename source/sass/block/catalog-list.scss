@@ -26,6 +26,10 @@
   @media (max-width: $min-tablet - 1px) {
     max-width: $min-phone;
     margin: auto;
+
+    &:nth-child(2) {
+      margin-bottom: 3px;
+    }
   }
 
   @media (min-width: $min-tablet) {
