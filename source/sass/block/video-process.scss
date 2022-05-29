@@ -65,7 +65,9 @@
   font-size: 13px;
 
   @media (min-width: $min-tablet) {
+    min-width: 620px;
     padding-top: 0;
+    padding-right: 0;
     padding-left: 40px;
     padding-bottom: 40px;
 
@@ -73,6 +75,7 @@
   }
 
   @media (min-width: $min-desktop) {
+    min-width: 252px;
     padding-left: 0;
     padding-bottom: 52px;
   }
@@ -81,6 +84,7 @@
 .video-process__order {
   max-width: 192px;
   margin-bottom: 31px;
+  font-size: 18px;
 
   @media (min-width: $min-tablet) {
     max-width: 584px;

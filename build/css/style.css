@@ -1166,14 +1166,14 @@ img {
   .page-main__video {
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 28px;
+    margin-top: 30px;
     padding-bottom: 63px;
   }
 }
 @media (min-width: 1150px) {
   .page-main__video {
     margin-top: 30px;
-    padding-top: 24px;
+    padding-top: 22px;
     padding-bottom: 105px;
   }
 }
@@ -2133,8 +2133,8 @@ img {
   background-repeat: no-repeat;
   width: 67px;
   height: 100px;
-  bottom: 200px;
-  right: 200px;
+  bottom: 302px;
+  right: 123px;
 }
 @media (min-width: 768px) {
   .contacts__container::after {
@@ -2144,8 +2144,8 @@ img {
 }
 @media (min-width: 1150px) {
   .contacts__container::after {
-    bottom: 200px;
-    right: 200px;
+    bottom: 257px;
+    left: 813px;
   }
 }
 
@@ -2286,7 +2286,7 @@ img {
 }
 
 .contacts__write-us {
-  margin-top: 43px;
+  margin-top: 72px;
 }
 @media (min-width: 768px) {
   .contacts__write-us {
@@ -2382,7 +2382,7 @@ img {
 }
 
 .footer {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 20px;
   background-color: #f1f1f1;
 }
@@ -2511,7 +2511,12 @@ img {
 }
 @media (min-width: 768px) {
   .copyright {
-    min-width: 180px;
+    min-width: 181px;
+  }
+}
+@media (min-width: 1150px) {
+  .copyright {
+    min-width: 184px;
   }
 }
 
@@ -2780,8 +2785,8 @@ img {
     max-width: 320px;
     margin: auto;
   }
-  .catalog-list__item:nth-child(1) {
-    margin-bottom: 1px;
+  .catalog-list__item:nth-child(2) {
+    margin-bottom: 3px;
   }
 }
 @media (min-width: 768px) {
@@ -2812,7 +2817,7 @@ img {
 }
 @media (min-width: 768px) {
   .video-process__icon {
-    top: 31px;
+    top: 34px;
     left: 41px;
   }
 }
@@ -2839,7 +2844,7 @@ img {
 }
 @media (min-width: 768px) {
   .video-process__title {
-    padding-top: 39px;
+    padding-top: 42px;
     padding-left: 107px;
     padding-bottom: 24px;
     padding-right: 10px;
@@ -2866,9 +2871,9 @@ img {
 .video-process__description {
   margin: 0;
   padding: 0;
-  padding-top: 32px;
+  padding-top: 34px;
   padding-bottom: 41px;
-  padding-left: 35px;
+  padding-left: 33px;
   padding-right: 10px;
   font-size: 15px;
   line-height: 24px;
@@ -2878,7 +2883,9 @@ img {
 }
 @media (min-width: 768px) {
   .video-process__description {
+    min-width: 620px;
     padding-top: 0;
+    padding-right: 0;
     padding-left: 40px;
     padding-bottom: 40px;
     font-size: 15px;
@@ -2889,6 +2896,7 @@ img {
 }
 @media (min-width: 1150px) {
   .video-process__description {
+    width: 252px;
     padding-left: 0;
     padding-bottom: 52px;
   }
@@ -2897,6 +2905,7 @@ img {
 .video-process__order {
   max-width: 192px;
   margin-bottom: 31px;
+  font-size: 18px;
 }
 @media (min-width: 768px) {
   .video-process__order {
