@@ -92,12 +92,16 @@
 .form-fieldset__label--radio::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -4px;
   left: 0;
 
   @include size (40px, 40px);
   border: 2px solid $darkest-grey;
   border-radius: 50%;
+
+  &:nth-child(2) {
+    top: -2px;
+  }
 
   @media (min-width: $min-tablet) {
     top: -17px;
@@ -195,7 +199,7 @@
   }
 
   @media (min-width: $min-desktop) {
-    left: 30px;
+    left: 28px;
   }
 }
 
