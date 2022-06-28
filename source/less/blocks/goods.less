@@ -1,0 +1,105 @@
+∆.goods {
+  border: 1px solid @border-color;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img title"
+      "img disc"
+      "img price";
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 316px;
+    height: 659px;
+  }
+}
+
+.goods__link-img {
+  display: block;
+  grid-area: img;
+
+  @media (max-width: @mobile-width-only) {
+    width: 260px;
+    height: 195px;
+    background-image: url("../img/photo-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; //не сработало
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 334px;
+    background-image: url("../img/photo-1-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; //не сработало
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 442px;
+    background-image: url("../img/photo-1-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; //не сработало
+  }
+}
+
+.goods__image {
+  display: block;
+}
+
+.goods__link-title {
+  grid-area: title;
+  display: inline-block;
+  padding-top: 28px;
+  padding-bottom: 6px;
+  padding-left: 28px;
+}
+
+.goods__title {
+  margin: 0;
+  font-size: @menu-size;
+  line-height: @menu-line;
+  color: @caption-color;
+}
+
+.goods__description {
+  grid-area: disc;
+  margin: 0;
+  margin-bottom: 17px;
+  margin-left: 28px;
+  font-size: @descript-size;
+  line-height: @descript-line;
+}
+
+.goods__price-wrapper {
+  grid-area: price;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0 27px 0;
+  margin: 0 28px;
+  border-top: 1px solid @border-color;
+
+  @media (min-width: @desktop-width) {
+    width: 256px;
+  }
+}
+
+.goods__price {
+  margin: 0;
+  font-size: @txt-size;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.goods__icon-basket {
+}

@@ -1,0 +1,32 @@
+.slider__toogles {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.slider__toogle {
+  width: 130px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid @border-color;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.slider__toogle--previous {
+  background-image: url("/source/img/huge-arrow-left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider__toogle:hover .slider__toogle-icon {
+  fill: fade(@caption-color, 60%);
+}
+
+.slider__toogle:active .slider__toogle-icon {
+  fill: fade(@caption-color, 30%);
+}

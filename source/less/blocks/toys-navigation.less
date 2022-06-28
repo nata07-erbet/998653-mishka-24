@@ -1,0 +1,120 @@
+.toys-navigation {
+  margin-top: -91px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 56px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat-x;
+      background-position: 50% 0;
+      bottom: -12px;
+      left: 0;
+    }
+  }
+}
+
+.toys-navigation__list {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+  margin: 0 -30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.toys-navigation__item {
+  width: 334px;
+  height: 103px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 119px;
+  }
+}
+
+.toys-navigation__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: @bg-color;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  border: none;
+
+  &--interios {
+    background-color: @btn-left-color;
+  }
+
+  &--child {
+    background-color: @btn-right-color;
+  }
+
+  &:hover {
+    transform: scaleY(1.05);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 35px;
+  }
+}
+
+.toys-navigation-caption {
+  width: 130px;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 24px;
+  margin-bottom: 31px;
+  letter-spacing: 1px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 1px;
+    letter-spacing: 1px;
+  }
+}
+
+.toys-navigation__icon {
+  margin-right: 30px;
+}
+
+.toys-navigation__icon--interios {
+  margin-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 6px;
+  }
+}
+
+.toys-navigation__icon--toy {
+  @media (min-width: @tablet-width) {
+    margin-right: 1px;
+  }
+}
